@@ -1,4 +1,4 @@
-package Soundeffects.hkq;
+package com.youdian.soundeffects.hkq;
 
 import sun.audio.AudioPlayer;
 import sun.audio.AudioStream;

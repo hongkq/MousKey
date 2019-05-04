@@ -1,4 +1,4 @@
-package Soundeffects;
+package com.youdian.soundeffects;
 
 import static org.junit.Assert.assertTrue;
 
