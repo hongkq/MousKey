@@ -1,7 +1,7 @@
 # MousKey
 
 #### 介绍
-Java swing项目，maven方式搭建
+Java swing项目，maven方式搭建,开发中
 
 #### 软件架构
 软件架构说明
