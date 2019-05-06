@@ -18,6 +18,18 @@ import java.util.function.Function;
 public class WindowsKeyboardListener implements KeyboardListener <Function <User32.HHOOK, User32.LowLevelKeyboardProc>> {
 
 
+    /**
+     * 停止任务
+     */
+    private static final int STOP = 0;
+    /**
+     * 任务运行中
+     */
+    private static final int RUNNING = 1;
+    /**
+     * 重新运行
+     */
+    private static final int RESUME = 2;
     private volatile User32.HHOOK hhk;
     private User32.LowLevelKeyboardProc keyboardHook;
     private User32 lib;
@@ -26,24 +38,6 @@ public class WindowsKeyboardListener implements KeyboardListener <Function <User
     private volatile int resume = RESUME;
     private volatile boolean isRun = true;
     private Runnable runnable;
-
-
-    /**
-     * 停止任务
-     */
-    private static final int STOP = 0;
-
-
-    /**
-     * 任务运行中
-     */
-    private static final int RUNNING = 1;
-
-    /**
-     * 重新运行
-     */
-    private static final int RESUME = 2;
-
 
     @Override
     public void init() {
