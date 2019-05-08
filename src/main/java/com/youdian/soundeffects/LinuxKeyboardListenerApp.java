@@ -1,30 +1,31 @@
-package com.youdian.soundeffects.hkq;
+package com.youdian.soundeffects;
 
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import com.youdian.soundeffects.hkq.FirstMusicThread;
+import com.youdian.soundeffects.hkq.LinuxKeyboardListener;
+import com.youdian.soundeffects.hkq.RegisterUI;
+
 
 /**
- * 测试Linux环境键盘监听
+ * Linux环境键盘监听
  *
  * @author DHB
  */
 @SuppressWarnings("all")
-public class LinuxKeyboardListenerTest {
+public class LinuxKeyboardListenerApp  {
     private LinuxKeyboardListener keyboardListener;
     private FirstMusicThread firstMusicThread;
     private RegisterUI registerUI;
 
 
-    @Before
+
     public void before() {
         keyboardListener = new LinuxKeyboardListener ( );
         firstMusicThread = new FirstMusicThread ( );
         registerUI=new RegisterUI ();
     }
 
-    @Test
+
     public void listening() {
         keyboardListener.init ( );
         firstMusicThread.init ( );
@@ -74,8 +75,6 @@ public class LinuxKeyboardListenerTest {
         }
     }
 
-
-    @After
     public void after() {
         keyboardListener.unListening ( );
         keyboardListener.destroy ( );

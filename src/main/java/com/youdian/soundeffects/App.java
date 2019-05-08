@@ -1,4 +1,4 @@
-package com.gzcodestudio.soundeffects;
+package com.youdian.soundeffects;
 
 
 /**
@@ -8,8 +8,15 @@ package com.gzcodestudio.soundeffects;
  * @date 2019/05/01
  */
 public class App {
-
     public static void main(String[] args) {
+        LinuxKeyboardListenerApp linuxKeyboardListenerApp = new LinuxKeyboardListenerApp ( );
+        linuxKeyboardListenerApp.before ( );
+        linuxKeyboardListenerApp.listening ( );
+
+        WindowsKeyboardListenerApp windowsKeyboardListenerApp = new WindowsKeyboardListenerApp ( );
+        windowsKeyboardListenerApp.before ( );
+        windowsKeyboardListenerApp.listening ( );
+
 
     }
 

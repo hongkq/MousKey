@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="19d1d6b0-1be7-4da4-9593-cf0869b107be" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/hkq/WindowsKeyboardListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/hkq/WindowsKeyboardListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/hkq/Music.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/youdian/soundeffects/hkq/LinuxKeyboardListenerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/youdian/soundeffects/hkq/LinuxKeyboardListenerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/youdian/soundeffects/hkq/WindowsKeyboardListenerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/youdian/soundeffects/hkq/WindowsKeyboardListenerTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,38 +16,40 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/hkq/RegisterUI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="77" selection-start-line="77" selection-end-line="77" />
+              <folding>
+                <element signature="e#6648#6649#0" expanded="true" />
+                <element signature="e#6677#6678#0" expanded="true" />
+                <element signature="e#6719#6720#0" expanded="true" />
+                <element signature="e#6750#6751#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/LinuxKeyboardListenerApp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="36" column="53" selection-start-line="36" selection-start-column="53" selection-end-line="36" selection-end-column="53" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/youdian/soundeffects/hkq/WindowsKeyboardListenerTest.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/WindowsKeyboardListenerApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="79" column="39" lean-forward="true" selection-start-line="79" selection-start-column="39" selection-end-line="79" selection-end-column="39" />
-              <folding>
-                <element signature="e#319#343#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/util/ThreadUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            <state relative-caret-position="471">
+              <caret line="85" column="22" lean-forward="true" selection-start-line="85" selection-start-column="22" selection-end-line="85" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/youdian/soundeffects/hkq/LinuxKeyboardListenerTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-column="37" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#162#186#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -65,8 +67,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/hkq/LinuxKeyboardListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-column="32" />
+            <state relative-caret-position="17">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/hkq/SystemUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="25" column="28" selection-start-line="24" selection-start-column="6" selection-end-line="25" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/hkq/WindowsKeyboardListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1139">
+              <caret line="67" column="28" selection-start-line="67" selection-start-column="28" selection-end-line="67" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -74,7 +97,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/hkq/FirstMusicThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
+            <state relative-caret-position="127">
               <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -84,21 +107,18 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/hkq/MusicListener.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/hkq/SecondMusicThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/hkq/WindowsKeyboardListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1066">
-              <caret line="118" selection-start-line="118" selection-end-line="118" />
+            <state relative-caret-position="1173">
+              <caret line="105" column="16" selection-start-line="105" selection-start-column="16" selection-end-line="105" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1494#1495#0" expanded="true" />
+                <element signature="e#1534#1535#0" expanded="true" />
+                <element signature="e#3322#3323#0" expanded="true" />
+                <element signature="e#3351#3352#0" expanded="true" />
+                <element signature="e#3421#3422#0" expanded="true" />
+                <element signature="e#3452#3453#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -113,19 +133,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/hkq/Music.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -137,7 +152,6 @@
         <option value="$PROJECT_DIR$/src/main/java/Soundeffects/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/Soundeffects/hkq/Music.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/hkq/Music.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/util/ThreadUtil.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/hkq/KeyBoardCallback.java" />
@@ -145,8 +159,14 @@
         <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/hkq/MusicListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/hkq/FirstMusicThread.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/hkq/WindowsKeyboardListener.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/youdian/soundeffects/hkq/LinuxKeyboardListenerTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/youdian/soundeffects/hkq/WindowsKeyboardListenerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/hkq/SystemUtils.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/youdian/soundeffects/hkq/LinuxKeyboardListenerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/WindowsKeyboardListenerApp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/LinuxKeyboardListenerApp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/App.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/hkq/SecondMusicThread.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/hkq/RegisterUI.java" />
       </list>
     </option>
   </component>
@@ -157,11 +177,11 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="1480" />
-    <option name="y" value="56" />
-    <option name="width" value="1356" />
-    <option name="height" value="576" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1582" />
+    <option name="y" value="57" />
+    <option name="width" value="1221" />
+    <option name="height" value="768" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -170,6 +190,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -221,50 +242,22 @@
               <item name="soundeffects" type="462c0819:PsiDirectoryNode" />
               <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="MousKey" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MousKey" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MousKey" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MousKey" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MousKey" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MousKey" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="soundeffects" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MousKey" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MousKey" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="soundeffects" type="462c0819:PsiDirectoryNode" />
-              <item name="hkq" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557152356533" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557325501850" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.youdian.soundeffects" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/hkq" />
       <recent name="$PROJECT_DIR$/src/test/java/com/youdian/soundeffects/hkq" />
@@ -283,7 +276,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.LinuxKeyboardListenerTest">
+  <component name="RunManager" selected="Application.App (1)">
+    <configuration name="App (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.youdian.soundeffects.App" />
+      <module name="MousKey" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.youdian.soundeffects.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Soundeffects.App" />
       <module name="MousKey" />
@@ -314,6 +320,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.App (1)" />
         <item itemvalue="JUnit.LinuxKeyboardListenerTest" />
         <item itemvalue="Application.App" />
       </list>
@@ -332,32 +339,61 @@
       <workItem from="1556800920363" duration="2715000" />
       <workItem from="1556853773532" duration="531000" />
       <workItem from="1556941667782" duration="1823000" />
-      <workItem from="1557151883726" duration="417000" />
+      <workItem from="1557151883726" duration="1068000" />
+      <workItem from="1557319490572" duration="6009000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="LinuxKeyboardListenerTest - 2019.05.04 at 11h 57m 05s.xml">
+    <history-entry file="LinuxKeyboardListenerTest - 2019.05.06 at 22h 18m 51s.xml">
+      <configuration name="LinuxKeyboardListenerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LinuxKeyboardListenerTest - 2019.05.08 at 21h 13m 04s.xml">
+      <configuration name="LinuxKeyboardListenerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LinuxKeyboardListenerTest - 2019.05.08 at 21h 18m 19s.xml">
+      <configuration name="LinuxKeyboardListenerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LinuxKeyboardListenerTest - 2019.05.08 at 21h 22m 27s.xml">
+      <configuration name="LinuxKeyboardListenerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LinuxKeyboardListenerTest - 2019.05.08 at 21h 32m 42s.xml">
+      <configuration name="LinuxKeyboardListenerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LinuxKeyboardListenerTest - 2019.05.08 at 21h 36m 38s.xml">
+      <configuration name="LinuxKeyboardListenerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LinuxKeyboardListenerTest - 2019.05.08 at 21h 37m 18s.xml">
+      <configuration name="LinuxKeyboardListenerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LinuxKeyboardListenerTest - 2019.05.08 at 21h 44m 07s.xml">
+      <configuration name="LinuxKeyboardListenerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LinuxKeyboardListenerTest - 2019.05.08 at 21h 45m 54s.xml">
+      <configuration name="LinuxKeyboardListenerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LinuxKeyboardListenerTest - 2019.05.08 at 21h 47m 15s.xml">
       <configuration name="LinuxKeyboardListenerTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5486000" />
+    <option name="totallyTimeSpent" value="12146000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="312" width="1366" height="768" extended-state="6" />
+    <frame x="1366" y="0" width="1920" height="1030" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25302115" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18104367" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Duplicate detector" visible="true" weight="0.18353726" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32967034" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49921995" weight="0.3265306" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49921995" weight="0.033370413" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -401,6 +437,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/a1.wav">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/youdian/soundeffects/hkq/WindowsKeyboardListenerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="512">
+          <caret line="79" column="39" selection-start-line="79" selection-start-column="39" selection-end-line="79" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/youdian/soundeffects/hkq/LinuxKeyboardListenerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="32" column="64" lean-forward="true" selection-start-line="32" selection-start-column="64" selection-end-line="32" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/util/ThreadUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/util/SystemUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -410,25 +476,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        <state relative-caret-position="323">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/util/ThreadUtil.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/hkq/Music.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/hkq/WindowsKeyboardListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1066">
-          <caret line="118" selection-start-line="118" selection-end-line="118" />
+        <state relative-caret-position="249">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -442,13 +498,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/hkq/Music.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/hkq/WindowsKeyboardListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="1139">
+          <caret line="67" column="28" selection-start-line="67" selection-start-column="28" selection-end-line="67" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/hkq/KeyBoardCallback.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -459,9 +522,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/hkq/LinuxKeyboardListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/hkq/FirstMusicThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
+        <state relative-caret-position="127">
           <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -469,40 +539,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/a1.wav">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/hkq/KeyBoardCallback.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/hkq/SystemUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+        <state relative-caret-position="255">
+          <caret line="25" column="28" selection-start-line="24" selection-start-column="6" selection-end-line="25" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/hkq/LinuxKeyboardListener.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/hkq/SecondMusicThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/youdian/soundeffects/hkq/LinuxKeyboardListenerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-column="37" />
+        <state relative-caret-position="1173">
+          <caret line="105" column="16" selection-start-line="105" selection-start-column="16" selection-end-line="105" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#162#186#0" expanded="true" />
+            <element signature="e#1494#1495#0" expanded="true" />
+            <element signature="e#1534#1535#0" expanded="true" />
+            <element signature="e#3322#3323#0" expanded="true" />
+            <element signature="e#3351#3352#0" expanded="true" />
+            <element signature="e#3421#3422#0" expanded="true" />
+            <element signature="e#3452#3453#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/youdian/soundeffects/hkq/WindowsKeyboardListenerTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/hkq/RegisterUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="79" column="39" lean-forward="true" selection-start-line="79" selection-start-column="39" selection-end-line="79" selection-end-column="39" />
+        <state relative-caret-position="252">
+          <caret line="77" selection-start-line="77" selection-end-line="77" />
           <folding>
-            <element signature="e#319#343#0" expanded="true" />
+            <element signature="e#6648#6649#0" expanded="true" />
+            <element signature="e#6677#6678#0" expanded="true" />
+            <element signature="e#6719#6720#0" expanded="true" />
+            <element signature="e#6750#6751#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/LinuxKeyboardListenerApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="36" column="53" selection-start-line="36" selection-start-column="53" selection-end-line="36" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/WindowsKeyboardListenerApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="471">
+          <caret line="85" column="22" lean-forward="true" selection-start-line="85" selection-start-column="22" selection-end-line="85" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
