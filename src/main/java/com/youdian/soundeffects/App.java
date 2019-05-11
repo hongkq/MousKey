@@ -12,11 +12,12 @@ public class App {
         LinuxKeyboardListenerApp linuxKeyboardListenerApp = new LinuxKeyboardListenerApp ( );
         linuxKeyboardListenerApp.before ( );
         linuxKeyboardListenerApp.listening ( );
+        linuxKeyboardListenerApp.after ();
 
         WindowsKeyboardListenerApp windowsKeyboardListenerApp = new WindowsKeyboardListenerApp ( );
         windowsKeyboardListenerApp.before ( );
         windowsKeyboardListenerApp.listening ( );
-
+        windowsKeyboardListenerApp.after ();
 
     }
 

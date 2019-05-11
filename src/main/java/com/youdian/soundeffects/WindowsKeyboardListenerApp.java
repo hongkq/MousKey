@@ -15,10 +15,10 @@ import com.youdian.soundeffects.hkq.WindowsKeyboardListener;
  */
 @SuppressWarnings("all")
 public class WindowsKeyboardListenerApp {
-
+    private RegisterUI registerUI;
     private WindowsKeyboardListener keyboardListener;
     private FirstMusicThread firstMusicThread;
-    private RegisterUI registerUI;
+
 
     /**
      * 测试Windows环境键盘监听播放音频
@@ -28,18 +28,20 @@ public class WindowsKeyboardListenerApp {
      */
 
     public void before() {
+        registerUI=new RegisterUI ();
         keyboardListener = new WindowsKeyboardListener ( );
         firstMusicThread = new FirstMusicThread ( );
-        registerUI=new RegisterUI ();
+
 
     }
 
 
     public void listening() {
-        keyboardListener.init ( );
-        firstMusicThread.init ( );
-        registerUI.init ();
+        registerUI.init (  );
         registerUI.listening ();
+        keyboardListener.init ( );
+        firstMusicThread.init (  );
+
         // 监听回调
         keyboardListener.callback ( hhook -> {
             User32.LowLevelKeyboardProc keyboardHook = (code , wParam , info) -> {

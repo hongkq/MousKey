@@ -1,7 +1,6 @@
 package com.youdian.soundeffects.hkq;
 
 /**
- *
  * 键盘监听接口
  *
  * @author hkq

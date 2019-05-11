@@ -3,8 +3,6 @@ import com.sun.jna.Pointer;
 import com.sun.jna.platform.win32.User32;
 import com.sun.jna.platform.win32.WinDef;
 import com.sun.jna.platform.win32.WinUser;
-import com.youdian.soundeffects.hkq.FirstMusicThread;
-import com.youdian.soundeffects.hkq.WindowsKeyboardListener;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -35,7 +33,7 @@ public class WindowsKeyboardListenerTest {
     @Test
     public void listening() {
         keyboardListener.init ( );
-        firstMusicThread.init ( );
+        firstMusicThread.init (  );
         // 监听回调
         keyboardListener.callback ( hhook -> {
             User32.LowLevelKeyboardProc keyboardHook = (code , wParam , info) -> {

@@ -8,6 +8,8 @@ package com.youdian.soundeffects.hkq;
 public interface MusicListener<T> {
     /**
      * 初始化
+     *
+     * @param
      */
     void init();
 

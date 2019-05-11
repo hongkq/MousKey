@@ -13,48 +13,44 @@ import java.util.logging.Logger;
  *
  * @author hkq
  */
-public class LinuxKeyboardListener implements KeyboardListener<KeyBoardCallback<NativeKeyEvent>>, NativeKeyListener {
+public class LinuxKeyboardListener implements KeyboardListener <KeyBoardCallback <NativeKeyEvent>>, NativeKeyListener {
 
-
-    private KeyBoardCallback<NativeKeyEvent> callback;
-    private volatile boolean isListen = true;
 
     /**
      * 按下和弹起
      */
     public static final int TYPED = 1;
-
     /**
      * 按下
      */
     public static final int PRESSED = 2;
-
     /**
      * 弹起
      */
     public static final int RELEASED = 3;
-
+    private KeyBoardCallback <NativeKeyEvent> callback;
+    private volatile boolean isListen = true;
 
     @Override
     public void init() {
-        Logger logger = Logger.getLogger(GlobalScreen.class.getPackage().getName());
-        logger.setLevel(Level.WARNING);
-        logger.setUseParentHandlers(false);
+        Logger logger = Logger.getLogger ( GlobalScreen.class.getPackage ( ).getName ( ) );
+        logger.setLevel ( Level.WARNING );
+        logger.setUseParentHandlers ( false );
         try {
-            GlobalScreen.registerNativeHook();
+            GlobalScreen.registerNativeHook ( );
         } catch (NativeHookException e) {
-            e.printStackTrace();
+            e.printStackTrace ( );
         }
 
     }
 
     @Override
     public void listening() {
-        GlobalScreen.addNativeKeyListener(this);
+        GlobalScreen.addNativeKeyListener ( this );
     }
 
     @Override
-    public void callback(KeyBoardCallback<NativeKeyEvent> callback) {
+    public void callback(KeyBoardCallback <NativeKeyEvent> callback) {
         this.callback = callback;
     }
 
@@ -81,31 +77,31 @@ public class LinuxKeyboardListener implements KeyboardListener<KeyBoardCallback<
     @Override
     public void destroy() {
         try {
-            GlobalScreen.removeNativeKeyListener(this);
-            GlobalScreen.unregisterNativeHook();
+            GlobalScreen.removeNativeKeyListener ( this );
+            GlobalScreen.unregisterNativeHook ( );
         } catch (NativeHookException e) {
-            e.printStackTrace();
+            e.printStackTrace ( );
         }
     }
 
     @Override
     public void nativeKeyTyped(NativeKeyEvent nativeKeyEvent) {
         if (isListen) {
-            callback.callback(TYPED, nativeKeyEvent);
+            callback.callback ( TYPED , nativeKeyEvent );
         }
     }
 
     @Override
     public void nativeKeyPressed(NativeKeyEvent nativeKeyEvent) {
         if (isListen) {
-            callback.callback(PRESSED, nativeKeyEvent);
+            callback.callback ( PRESSED , nativeKeyEvent );
         }
     }
 
     @Override
     public void nativeKeyReleased(NativeKeyEvent nativeKeyEvent) {
         if (isListen) {
-            callback.callback(RELEASED, nativeKeyEvent);
+            callback.callback ( RELEASED , nativeKeyEvent );
         }
     }
 }

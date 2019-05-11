@@ -1,7 +1,6 @@
 package com.youdian.soundeffects.hkq;
 
 
-
 import com.youdian.soundeffects.util.ThreadUtil;
 import sun.audio.AudioPlayer;
 import sun.audio.AudioStream;
@@ -18,7 +17,7 @@ import java.util.concurrent.ScheduledThreadPoolExecutor;
  *
  * @author hkq
  */
-public class FirstMusicThread implements MusicListener {
+public class FirstMusicThread extends RegisterUI implements MusicListener {
 
     /**
      * 停止任务
@@ -39,15 +38,19 @@ public class FirstMusicThread implements MusicListener {
     private InputStream url;
     private AudioStream audioStream;
     private Object callback;
+    private String[] musicxuanze = new String[]{"a1.wav" , "b2.wav" , "a1.wav"};
 
     /**
      * 初始化
+     *
+     * @param
      */
     @Override
     public void init() {
         url = null;
         audioStream = null;
         poolExecutor = ThreadUtil.newExecutorService ( 1 , this.getClass ( ).getName ( ) );
+
     }
 
     /**
@@ -82,11 +85,13 @@ public class FirstMusicThread implements MusicListener {
 
             while (isRun) {
                 if (resume == RESUME) {
+                    SelectUid su = new SelectUid ( );
+                    int adds = su.getUid ( );
+
                     // 播放
-
                     try {
+                        url = new FileInputStream ( FirstMusicThread.class.getClassLoader ( ).getResource ( musicxuanze[adds] ).getPath ( ) );
 
-                        url = new FileInputStream ( FirstMusicThread.class.getClassLoader ( ).getResource ( "a1.wav" ).getPath ( ) );
                         // 创建音频流对象
                         audioStream = new AudioStream ( url );
                         // 使用音频播放器播放声音
@@ -125,7 +130,9 @@ public class FirstMusicThread implements MusicListener {
 
                 }
             }
-        };
+
+        }
+        ;
     }
 
     /**

@@ -5,8 +5,15 @@ import com.youdian.soundeffects.util.ThreadUtil;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.InputStream;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 
+/**
+ * @author hkq
+ * UI布局文件
+ */
 public class RegisterUI extends JFrame implements MusicListener {
 
     /**
@@ -24,6 +31,8 @@ public class RegisterUI extends JFrame implements MusicListener {
     static SystemTray tray = SystemTray.getSystemTray ( );
     private static TrayIcon trayIcon = null;
     private static RegisterUI frame = new RegisterUI ( );
+    public InputStream musics;
+    public int uid = 2;
     ScheduledThreadPoolExecutor UIpoolExecutor;
     private JPanel contentPane;
     private JLabel labelAcademic;
@@ -40,12 +49,15 @@ public class RegisterUI extends JFrame implements MusicListener {
     private Object callback;
     private FirstMusicThread firstMusicThread;
     private LinuxKeyboardListener linuxKeyboardListener;
-
+    private String a = "未选择";
+    private String b = "机械键盘";
+    private String c = "弓箭";
 
     @Override
     public void init() {
 
         UIpoolExecutor = ThreadUtil.newExecutorService ( 1 , this.getClass ( ).getName ( ) );
+
         setForeground ( SystemColor.activeCaption );
         setTitle ( "Hickeys" );
         setDefaultCloseOperation ( JFrame.EXIT_ON_CLOSE );
@@ -55,11 +67,9 @@ public class RegisterUI extends JFrame implements MusicListener {
         contentPane.setBorder ( new EmptyBorder ( 5 , 5 , 5 , 5 ) );
         setContentPane ( contentPane );
         contentPane.setLayout ( null );
-
         this.setUndecorated ( true );
         this.setResizable ( false );
         this.getRootPane ( ).setWindowDecorationStyle ( JRootPane.PLAIN_DIALOG );
-
 
         labelAcademic = new JLabel ( "选择声音：" );
         labelAcademic.setBounds ( 30 , 30 , 72 , 18 );
@@ -68,16 +78,8 @@ public class RegisterUI extends JFrame implements MusicListener {
         labelHeader = new JLabel ( "音量控制：" );
         labelHeader.setBounds ( 30 , 70 , 72 , 18 );
         contentPane.add ( labelHeader );
-        //选择键盘声音
-        comboAcademy = new JComboBox <String> ( );
-        comboAcademy.addItem ( "机械键盘" );
-        comboAcademy.addItem ( "弓箭" );
-        comboAcademy.setBounds ( 97 , 30 , 140 , 24 );
-        contentPane.add ( comboAcademy );
-        comboAcademy.addItemListener ( e -> {
 
 
-        } );
         //音量滑动条
         slider = new JSlider ( );
         slider.setBounds ( 97 , 70 , 140 , 40 );
@@ -95,7 +97,6 @@ public class RegisterUI extends JFrame implements MusicListener {
             frame.setVisible ( false );
             resume = RUNNING;
             newTask ( );
-
 
         } );
 
@@ -132,6 +133,9 @@ public class RegisterUI extends JFrame implements MusicListener {
 
             tray.remove ( trayIcon );
             System.exit ( 0 );
+            firstMusicThread.destroy ( );
+            linuxKeyboardListener.destroy ( );
+            destroy ( );
 
         } );
 
@@ -147,6 +151,37 @@ public class RegisterUI extends JFrame implements MusicListener {
         } catch (AWTException e) {
             e.printStackTrace ( );
         }
+        //声音选择框
+        comboAcademy = new JComboBox <String> ( );
+        comboAcademy.addItem ( a );
+        comboAcademy.addItem ( b );
+        comboAcademy.addItem ( c );
+        comboAcademy.setBounds ( 97 , 30 , 140 , 24 );
+        contentPane.add ( comboAcademy );
+        comboAcademy.addActionListener ( new ActionListener ( ) {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JComboBox as = (JComboBox) e.getSource ( );
+                String abc = (String) as.getSelectedItem ( );
+                SelectUid su = new SelectUid ( );
+                switch (abc) {
+                    case "未选择":
+                        su.setUid ( 0 );
+                        break;
+                    case "机械键盘":
+                        su.setUid ( 1 );
+
+                        break;
+                    case "弓箭":
+                        su.setUid ( 2 );
+
+                        break;
+
+
+                }
+            }
+        } );
+
 
     }
 
@@ -170,7 +205,6 @@ public class RegisterUI extends JFrame implements MusicListener {
                     try {
                         // Create the register window object
                         frame.init ( );
-                        frame.setVisible ( true );
 
                     } catch (Exception e) {
                         e.printStackTrace ( );
@@ -217,4 +251,8 @@ public class RegisterUI extends JFrame implements MusicListener {
         UIpoolExecutor.shutdown ( );
 
     }
+
 }
+
+
+

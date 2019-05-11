@@ -27,8 +27,8 @@ public class LinuxKeyboardListenerTest {
     @Test
     public void listening() {
         keyboardListener.init ( );
-        firstMusicThread.init ( );
-        registerUI.init ();
+        firstMusicThread.init (  );
+        registerUI.init (  );
         registerUI.listening ();
         keyboardListener.callback ( (type , nativeKeyEvent) -> {
             switch (type) {
