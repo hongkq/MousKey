@@ -71,14 +71,15 @@ public class WindowsKeyboardListenerApp {
                 while (true) {
                     Thread.sleep ( 10000 );
                     keyboardListener.unListening ( );
+                    registerUI.destroy ();
+                    firstMusicThread.unListening ();
                     System.out.println ( "停止" );
-                    Thread.sleep ( 5000 );
-                    System.out.println ( "重新运行" );
-                    keyboardListener.resume ( );
                 }
             } catch (InterruptedException e) {
                 e.printStackTrace ( );
             }
+            System.out.println ( "重新运行" );
+            keyboardListener.resume ( );
         } ).start ( );
 
 

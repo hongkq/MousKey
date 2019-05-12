@@ -9,13 +9,14 @@ package com.youdian.soundeffects.hkq;
 public class SelectUid {
     private int uid;
 
-    public int getUid() {
-        return uid;
-    }
 
     public void setUid(int uid) {
         this.uid = uid;
     }
+    public int getUid() {
+        return uid;
+    }
+
 
     @Override
     public String toString() {

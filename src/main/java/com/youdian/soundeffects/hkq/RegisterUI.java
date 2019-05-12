@@ -53,6 +53,7 @@ public class RegisterUI extends JFrame implements MusicListener {
     private String b = "机械键盘";
     private String c = "弓箭";
 
+
     @Override
     public void init() {
 
@@ -95,7 +96,8 @@ public class RegisterUI extends JFrame implements MusicListener {
         contentPane.add ( buttonSave );
         buttonSave.addActionListener ( e -> {
             frame.setVisible ( false );
-            resume = RUNNING;
+            unListening ( );
+
             /***
              * 窗口最小化到任务栏托盘
              */
@@ -114,6 +116,7 @@ public class RegisterUI extends JFrame implements MusicListener {
                                              frame.setVisible ( true );
                                              frame.setExtendedState ( JFrame.NORMAL );
                                              frame.toFront ( );
+                                             resume ( );
                                          }
                                      }
 
@@ -142,7 +145,6 @@ public class RegisterUI extends JFrame implements MusicListener {
             } catch (AWTException e1) {
                 e1.printStackTrace ( );
             }
-
 
 
         } );
@@ -178,13 +180,11 @@ public class RegisterUI extends JFrame implements MusicListener {
                         break;
                     case "机械键盘":
                         su.setUid ( 1 );
-
                         break;
                     case "弓箭":
                         su.setUid ( 2 );
-
                         break;
-                        default:
+                    default:
 
 
                 }
@@ -213,8 +213,9 @@ public class RegisterUI extends JFrame implements MusicListener {
                     // 监听
                     try {
                         // Create the register window object
-                        frame.init ();
+                        frame.init ( );
                         frame.setVisible ( true );
+
                     } catch (Exception e) {
                         e.printStackTrace ( );
                     }
@@ -230,6 +231,7 @@ public class RegisterUI extends JFrame implements MusicListener {
                  * PeekMessage 非阻塞
                  * GetMessage  阻塞
                  * */
+                unListening ( );
 
 
             }

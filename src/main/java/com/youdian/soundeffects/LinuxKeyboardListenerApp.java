@@ -22,23 +22,25 @@ public class LinuxKeyboardListenerApp {
         keyboardListener = new LinuxKeyboardListener ( );
         firstMusicThread = new FirstMusicThread ( );
 
+
     }
 
 
     public void listening() {
-        registerUI.init ( );
-        registerUI.listening ( );
+        registerUI.init ();
+        registerUI.listening ();
         keyboardListener.init ( );
         firstMusicThread.init ( );
+
         keyboardListener.callback ( (type , nativeKeyEvent) -> {
+
             switch (type) {
                 case LinuxKeyboardListener.TYPED:
                     break;
                 case LinuxKeyboardListener.PRESSED:
                     System.out.println ( "按下" + nativeKeyEvent.getKeyCode ( ) );
                     //开启音频播放
-
-                    firstMusicThread.resume ( );
+                     firstMusicThread.resume ( );
 
                     // 按下q取消键盘监听
                     if (nativeKeyEvent.getKeyCode ( ) == 16) {
@@ -55,16 +57,22 @@ public class LinuxKeyboardListenerApp {
             }
         } );
         keyboardListener.listening ( );
-        firstMusicThread.listening ( );
+        firstMusicThread.listening ();
+
         new Thread ( () -> {
             while (true) {
                 try {
+
                     Thread.sleep ( 5000 );
+                    keyboardListener.unListening ();
+                    firstMusicThread.unListening ();
+                    registerUI.destroy ();
 
                 } catch (InterruptedException e) {
                     e.printStackTrace ( );
                 }
                 keyboardListener.resume ( );
+
                 System.out.println ( "测试自动恢复" );
             }
         } ).start ( );

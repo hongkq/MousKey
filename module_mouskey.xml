@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_mouskey" default="compile.module.mouskey">
+  <dirname property="module.mouskey.basedir" file="${ant.file.module_mouskey}"/>
+  
+  <property name="module.jdk.home.mouskey" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.mouskey" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.mouskey" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.mouskey" value="-encoding UTF-8 -source 8 -target 1.8 ${compiler.args}"/>
+  
+  <property name="mouskey.output.dir" value="${module.mouskey.basedir}/target/classes"/>
+  <property name="mouskey.testoutput.dir" value="${module.mouskey.basedir}/target/test-classes"/>
+  
+  <path id="mouskey.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="mouskey.module.production.classpath">
+    <path refid="${module.jdk.classpath.mouskey}"/>
+    <path refid="library.maven:_org.apache.commons:commons-lang3:3.9.classpath"/>
+    <path refid="library.maven:_commons-logging:commons-logging:1.2.classpath"/>
+    <path refid="library.maven:_net.java.dev.jna:jna:5.3.1.classpath"/>
+    <path refid="library.maven:_net.java.dev.jna:jna-platform:5.3.1.classpath"/>
+    <path refid="library.maven:_com.1stleg:jnativehook:2.1.0.classpath"/>
+  </path>
+  
+  <path id="mouskey.runtime.production.module.classpath">
+    <pathelement location="${mouskey.output.dir}"/>
+    <path refid="library.maven:_org.apache.commons:commons-lang3:3.9.classpath"/>
+    <path refid="library.maven:_commons-logging:commons-logging:1.2.classpath"/>
+    <path refid="library.maven:_net.java.dev.jna:jna:5.3.1.classpath"/>
+    <path refid="library.maven:_net.java.dev.jna:jna-platform:5.3.1.classpath"/>
+    <path refid="library.maven:_com.1stleg:jnativehook:2.1.0.classpath"/>
+  </path>
+  
+  <path id="mouskey.module.classpath">
+    <path refid="${module.jdk.classpath.mouskey}"/>
+    <pathelement location="${mouskey.output.dir}"/>
+    <path refid="library.maven:_junit:junit:4.11.classpath"/>
+    <path refid="library.maven:_org.hamcrest:hamcrest-core:1.3.classpath"/>
+    <path refid="library.maven:_org.apache.commons:commons-lang3:3.9.classpath"/>
+    <path refid="library.maven:_commons-logging:commons-logging:1.2.classpath"/>
+    <path refid="library.maven:_net.java.dev.jna:jna:5.3.1.classpath"/>
+    <path refid="library.maven:_net.java.dev.jna:jna-platform:5.3.1.classpath"/>
+    <path refid="library.maven:_com.1stleg:jnativehook:2.1.0.classpath"/>
+  </path>
+  
+  <path id="mouskey.runtime.module.classpath">
+    <pathelement location="${mouskey.testoutput.dir}"/>
+    <pathelement location="${mouskey.output.dir}"/>
+    <path refid="library.maven:_junit:junit:4.11.classpath"/>
+    <path refid="library.maven:_org.hamcrest:hamcrest-core:1.3.classpath"/>
+    <path refid="library.maven:_org.apache.commons:commons-lang3:3.9.classpath"/>
+    <path refid="library.maven:_commons-logging:commons-logging:1.2.classpath"/>
+    <path refid="library.maven:_net.java.dev.jna:jna:5.3.1.classpath"/>
+    <path refid="library.maven:_net.java.dev.jna:jna-platform:5.3.1.classpath"/>
+    <path refid="library.maven:_com.1stleg:jnativehook:2.1.0.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.mouskey">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.mouskey">
+    <patternset refid="excluded.from.module.mouskey"/>
+  </patternset>
+  
+  <path id="mouskey.module.sourcepath">
+    <dirset dir="${module.mouskey.basedir}">
+      <include name="src/main/java"/>
+      <include name="src/main/resources"/>
+    </dirset>
+  </path>
+  
+  <path id="mouskey.module.test.sourcepath">
+    <dirset dir="${module.mouskey.basedir}">
+      <include name="src/test/java"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.mouskey" depends="compile.module.mouskey.production,compile.module.mouskey.tests" description="Compile module MousKey"/>
+  
+  <target name="compile.module.mouskey.production" depends="register.custom.compilers" description="Compile module MousKey; production classes">
+    <mkdir dir="${mouskey.output.dir}"/>
+    <javac2 destdir="${mouskey.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.mouskey}/javac">
+      <compilerarg line="${compiler.args.mouskey}"/>
+      <bootclasspath refid="mouskey.module.bootclasspath"/>
+      <classpath refid="mouskey.module.production.classpath"/>
+      <src refid="mouskey.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.mouskey"/>
+    </javac2>
+    
+    <copy todir="${mouskey.output.dir}">
+      <fileset dir="${module.mouskey.basedir}/src/main/java">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.mouskey.basedir}/src/main/resources">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.mouskey.tests" depends="register.custom.compilers,compile.module.mouskey.production" description="compile module MousKey; test classes" unless="skip.tests">
+    <mkdir dir="${mouskey.testoutput.dir}"/>
+    <javac2 destdir="${mouskey.testoutput.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.mouskey}/javac">
+      <compilerarg line="${compiler.args.mouskey}"/>
+      <bootclasspath refid="mouskey.module.bootclasspath"/>
+      <classpath refid="mouskey.module.classpath"/>
+      <src refid="mouskey.module.test.sourcepath"/>
+      <patternset refid="excluded.from.compilation.mouskey"/>
+    </javac2>
+    
+    <copy todir="${mouskey.testoutput.dir}">
+      <fileset dir="${module.mouskey.basedir}/src/test/java">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="clean.module.mouskey" description="cleanup module">
+    <delete dir="${mouskey.output.dir}"/>
+    <delete dir="${mouskey.testoutput.dir}"/>
+  </target>
+</project>

@@ -1,14 +1,13 @@
 package com.youdian.soundeffects.hkq;
 
 
+
 import com.youdian.soundeffects.util.ThreadUtil;
+
 import sun.audio.AudioPlayer;
 import sun.audio.AudioStream;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 
 
@@ -40,6 +39,7 @@ public class FirstMusicThread extends RegisterUI implements MusicListener {
     private Object callback;
     private String[] musicxuanze = new String[]{"a1.wav" , "b2.wav" , "a1.wav"};
 
+
     /**
      * 初始化
      *
@@ -51,6 +51,8 @@ public class FirstMusicThread extends RegisterUI implements MusicListener {
         audioStream = null;
         poolExecutor = ThreadUtil.newExecutorService ( 1 , this.getClass ( ).getName ( ) );
 
+
+
     }
 
     /**
@@ -58,12 +60,14 @@ public class FirstMusicThread extends RegisterUI implements MusicListener {
      */
     @Override
     public void listening() {
+
         if (runnable == null) {
-            newTask ( );
-            poolExecutor.submit ( runnable );
-        } else {
-            throw new IllegalArgumentException ( "listening() 仅允许执行一次" );
+                newTask ( );
+                poolExecutor.submit ( runnable );
+            } else {
+                throw new IllegalArgumentException ( "listening() 仅允许执行一次" );
         }
+
     }
 
     /**
@@ -85,17 +89,18 @@ public class FirstMusicThread extends RegisterUI implements MusicListener {
 
             while (isRun) {
                 if (resume == RESUME) {
-                    SelectUid su = new SelectUid ( );
-                    int adds = su.getUid ( );
 
                     // 播放
                     try {
-                        url = new FileInputStream ( FirstMusicThread.class.getClassLoader ( ).getResource ( musicxuanze[adds] ).getPath ( ) );
+
+                         url=this.getClass().getResourceAsStream("/a1.wav");
+
 
                         // 创建音频流对象
                         audioStream = new AudioStream ( url );
                         // 使用音频播放器播放声音
                         AudioPlayer.player.start ( audioStream );
+
 
                     } catch (FileNotFoundException e) {
                         e.printStackTrace ( );
@@ -104,6 +109,7 @@ public class FirstMusicThread extends RegisterUI implements MusicListener {
                     } finally {
                         //如果资源为空，关闭资源
                         try {
+                            unListening ();
                             if (url == null) {
                                 url.close ( );
                             }
@@ -141,6 +147,8 @@ public class FirstMusicThread extends RegisterUI implements MusicListener {
     @Override
     public void unListening() {
         resume = STOP;
+        poolExecutor.shutdownNow ();
+
     }
 
     /**
@@ -148,7 +156,9 @@ public class FirstMusicThread extends RegisterUI implements MusicListener {
      */
     @Override
     public void resume() {
-        resume = RESUME;
+       resume = RESUME;
+
+
     }
 
     /**
@@ -158,7 +168,7 @@ public class FirstMusicThread extends RegisterUI implements MusicListener {
     public void destroy() {
         isRun = false;
         unListening ( );
-        poolExecutor.shutdown ( );
+        poolExecutor.shutdown( );
 
     }
 }
