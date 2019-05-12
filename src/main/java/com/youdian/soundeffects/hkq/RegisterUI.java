@@ -96,7 +96,54 @@ public class RegisterUI extends JFrame implements MusicListener {
         buttonSave.addActionListener ( e -> {
             frame.setVisible ( false );
             resume = RUNNING;
-            newTask ( );
+            /***
+             * 窗口最小化到任务栏托盘
+             */
+
+            //托盘图标
+            ImageIcon trayImg = new ImageIcon ( RegisterUI.class.getClassLoader ( ).getResource ( "qq.jpg" ).getPath ( ) );
+            //增加托盘右击菜单
+            PopupMenu pop = new PopupMenu ( );
+            MenuItem show = new MenuItem ( "还原" );
+            MenuItem exit = new MenuItem ( "退出" );
+            // 按下还原键
+            show.addActionListener ( new ActionListener ( ) {
+                                         @Override
+                                         public void actionPerformed(ActionEvent e) {
+                                             tray.remove ( trayIcon );
+                                             frame.setVisible ( true );
+                                             frame.setExtendedState ( JFrame.NORMAL );
+                                             frame.toFront ( );
+                                         }
+                                     }
+
+
+            );
+            // 按下退出键
+            exit.addActionListener ( new ActionListener ( ) {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    tray.remove ( trayIcon );
+                    System.exit ( 0 );
+                    firstMusicThread.destroy ( );
+                    linuxKeyboardListener.destroy ( );
+                    destroy ( );
+                }
+            } );
+
+            pop.add ( show );
+            pop.add ( exit );
+
+            trayIcon = new TrayIcon ( trayImg.getImage ( ) , "键盘提示音" , pop );
+            trayIcon.setImageAutoSize ( true );
+
+            try {
+                tray.add ( trayIcon );
+            } catch (AWTException e1) {
+                e1.printStackTrace ( );
+            }
+
+
 
         } );
 
@@ -110,47 +157,8 @@ public class RegisterUI extends JFrame implements MusicListener {
             destroy ( );
 
         } );
-        /***
-         * 窗口最小化到任务栏托盘
-         */
-
-        //托盘图标
-        ImageIcon trayImg = new ImageIcon ( RegisterUI.class.getClassLoader ( ).getResource ( "qq.jpg" ).getPath ( ) );
-        //增加托盘右击菜单
-        PopupMenu pop = new PopupMenu ( );
-        MenuItem show = new MenuItem ( "还原" );
-        MenuItem exit = new MenuItem ( "退出" );
-        // 按下还原键
-        show.addActionListener ( e -> {
-
-            tray.remove ( trayIcon );
-            frame.setVisible ( true );
-            frame.setExtendedState ( JFrame.NORMAL );
-            frame.toFront ( );
-        } );
-        // 按下退出键
-        exit.addActionListener ( e -> {
-
-            tray.remove ( trayIcon );
-            System.exit ( 0 );
-            firstMusicThread.destroy ( );
-            linuxKeyboardListener.destroy ( );
-            destroy ( );
-
-        } );
-
-        pop.add ( show );
-        pop.add ( exit );
-
-        trayIcon = new TrayIcon ( trayImg.getImage ( ) , "键盘提示音" , pop );
-        trayIcon.setImageAutoSize ( true );
 
 
-        try {
-            tray.add ( trayIcon );
-        } catch (AWTException e) {
-            e.printStackTrace ( );
-        }
         //声音选择框
         comboAcademy = new JComboBox <String> ( );
         comboAcademy.addItem ( a );
@@ -176,6 +184,7 @@ public class RegisterUI extends JFrame implements MusicListener {
                         su.setUid ( 2 );
 
                         break;
+                        default:
 
 
                 }
@@ -204,8 +213,8 @@ public class RegisterUI extends JFrame implements MusicListener {
                     // 监听
                     try {
                         // Create the register window object
-                        frame.init ( );
-
+                        frame.init ();
+                        frame.setVisible ( true );
                     } catch (Exception e) {
                         e.printStackTrace ( );
                     }
