@@ -1,13 +1,13 @@
 package com.youdian.soundeffects.hkq;
 
 
-
 import com.youdian.soundeffects.util.ThreadUtil;
-
 import sun.audio.AudioPlayer;
 import sun.audio.AudioStream;
 
-import java.io.*;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 
 
@@ -16,7 +16,7 @@ import java.util.concurrent.ScheduledThreadPoolExecutor;
  *
  * @author hkq
  */
-public class FirstMusicThread  implements MusicListener {
+public class FirstMusicThread implements MusicListener {
 
     /**
      * 停止任务
@@ -39,7 +39,6 @@ public class FirstMusicThread  implements MusicListener {
     private Object callback;
 
 
-
     /**
      * 初始化
      *
@@ -52,7 +51,6 @@ public class FirstMusicThread  implements MusicListener {
         poolExecutor = ThreadUtil.newExecutorService ( 1 , this.getClass ( ).getName ( ) );
 
 
-
     }
 
     /**
@@ -62,10 +60,10 @@ public class FirstMusicThread  implements MusicListener {
     public void listening() {
 
         if (runnable == null) {
-                newTask ( );
-                poolExecutor.submit ( runnable );
-            } else {
-                throw new IllegalArgumentException ( "listening() 仅允许执行一次" );
+            newTask ( );
+            poolExecutor.submit ( runnable );
+        } else {
+            throw new IllegalArgumentException ( "listening() 仅允许执行一次" );
         }
 
     }
@@ -92,11 +90,11 @@ public class FirstMusicThread  implements MusicListener {
                 if (resume == RESUME) {
                     // 播放
                     try {
-                        SelectUid su=new SelectUid ();
-                        int adds=su.getUid ();
-                        if (adds==0) {
+                        SelectUid su = new SelectUid ( );
+                        int adds = su.getUid ( );
+                        if (adds == 0) {
                             url = this.getClass ( ).getResourceAsStream ( "/b2.wav" );
-                        }else {
+                        } else {
                             url = this.getClass ( ).getResourceAsStream ( "/a1.wav" );
                         }
                         // 创建音频流对象
@@ -112,7 +110,7 @@ public class FirstMusicThread  implements MusicListener {
                     } finally {
                         //如果资源为空，关闭资源
                         try {
-                            unListening ();
+                            unListening ( );
                             if (url == null) {
                                 url.close ( );
                             }
@@ -159,7 +157,7 @@ public class FirstMusicThread  implements MusicListener {
      */
     @Override
     public void resume() {
-       resume = RESUME;
+        resume = RESUME;
 
 
     }
@@ -171,16 +169,12 @@ public class FirstMusicThread  implements MusicListener {
     public void destroy() {
         isRun = false;
         unListening ( );
-        poolExecutor.shutdown( );
+        poolExecutor.shutdown ( );
 
     }
-    public void chengmo(){
-        isRun=false;
 
-
-    }
-    public void  huifu(){
-        isRun=true;
+    public void huifu() {
+        isRun = true;
 
     }
 

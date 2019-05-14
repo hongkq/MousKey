@@ -39,7 +39,6 @@ public class SecondMusicThread implements MusicListener {
     private Object callback;
 
 
-
     /**
      * 初始化
      *
@@ -52,7 +51,6 @@ public class SecondMusicThread implements MusicListener {
         secpoolExecutor = ThreadUtil.newExecutorService ( 1 , this.getClass ( ).getName ( ) );
 
 
-
     }
 
     /**
@@ -62,10 +60,10 @@ public class SecondMusicThread implements MusicListener {
     public void listening() {
 
         if (runnable == null) {
-                newTask ( );
+            newTask ( );
             secpoolExecutor.submit ( runnable );
-            } else {
-                throw new IllegalArgumentException ( "listening() 仅允许执行一次" );
+        } else {
+            throw new IllegalArgumentException ( "listening() 仅允许执行一次" );
         }
 
     }
@@ -92,7 +90,7 @@ public class SecondMusicThread implements MusicListener {
                 if (resume == RESUME) {
                     // 播放
                     try {
-                            url = this.getClass ( ).getResourceAsStream ( "/a1.wav" );
+                        url = this.getClass ( ).getResourceAsStream ( "/a1.wav" );
 
                         // 创建音频流对象
                         audioStream = new AudioStream ( url );
@@ -107,7 +105,7 @@ public class SecondMusicThread implements MusicListener {
                     } finally {
                         //如果资源为空，关闭资源
                         try {
-                            unListening ();
+                            unListening ( );
                             if (url == null) {
                                 url.close ( );
                             }
@@ -154,7 +152,7 @@ public class SecondMusicThread implements MusicListener {
      */
     @Override
     public void resume() {
-       resume = RESUME;
+        resume = RESUME;
 
 
     }
@@ -166,7 +164,7 @@ public class SecondMusicThread implements MusicListener {
     public void destroy() {
         isRun = false;
         unListening ( );
-        secpoolExecutor.shutdown( );
+        secpoolExecutor.shutdown ( );
 
     }
 

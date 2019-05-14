@@ -117,7 +117,7 @@ public class WindowsKeyboardListenerApp {
 
         keyboardListener.listening ( );
         firstMusicThread.listening ( );
-
+        secondMusicThread.listening ();
         while (true) {
             // 阻塞
         }

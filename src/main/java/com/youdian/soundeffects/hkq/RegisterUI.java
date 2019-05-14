@@ -228,24 +228,24 @@ public class RegisterUI extends JFrame implements MusicListener {
                     }
 
 
+                }
+                // 复位
+                resume = RUNNING;
             }
-            // 复位
-            resume = RUNNING;
-        }
-        if (resume == RUNNING) {
-            /*
-             * 处理键盘事件，分发到键盘监听上
-             * https://stackoverflow.com/questions/10684631/key-listener-written-in-java-jna-cannot-stop-the-thread
-             * PeekMessage 非阻塞
-             * GetMessage  阻塞
-             * */
+            if (resume == RUNNING) {
+                /*
+                 * 处理键盘事件，分发到键盘监听上
+                 * https://stackoverflow.com/questions/10684631/key-listener-written-in-java-jna-cannot-stop-the-thread
+                 * PeekMessage 非阻塞
+                 * GetMessage  阻塞
+                 * */
 
 
+            }
         }
+
+        ;
     }
-
-    ;
-}
 
     @Override
     public void callback(Object callback) {
