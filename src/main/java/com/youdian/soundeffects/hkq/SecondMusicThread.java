@@ -1,13 +1,13 @@
 package com.youdian.soundeffects.hkq;
 
 
-
 import com.youdian.soundeffects.util.ThreadUtil;
-
 import sun.audio.AudioPlayer;
 import sun.audio.AudioStream;
 
-import java.io.*;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 
 
@@ -16,7 +16,7 @@ import java.util.concurrent.ScheduledThreadPoolExecutor;
  *
  * @author hkq
  */
-public class FirstMusicThread  implements MusicListener {
+public class SecondMusicThread implements MusicListener {
 
     /**
      * 停止任务
@@ -30,7 +30,7 @@ public class FirstMusicThread  implements MusicListener {
      * 重新运行
      */
     public static final int RESUME = 2;
-    private ScheduledThreadPoolExecutor poolExecutor;
+    private ScheduledThreadPoolExecutor secpoolExecutor;
     private volatile int resume = RESUME;
     private volatile boolean isRun = true;
     private Runnable runnable;
@@ -49,7 +49,7 @@ public class FirstMusicThread  implements MusicListener {
     public void init() {
         url = null;
         audioStream = null;
-        poolExecutor = ThreadUtil.newExecutorService ( 1 , this.getClass ( ).getName ( ) );
+        secpoolExecutor = ThreadUtil.newExecutorService ( 1 , this.getClass ( ).getName ( ) );
 
 
 
@@ -63,7 +63,7 @@ public class FirstMusicThread  implements MusicListener {
 
         if (runnable == null) {
                 newTask ( );
-                poolExecutor.submit ( runnable );
+            secpoolExecutor.submit ( runnable );
             } else {
                 throw new IllegalArgumentException ( "listening() 仅允许执行一次" );
         }
@@ -92,13 +92,8 @@ public class FirstMusicThread  implements MusicListener {
                 if (resume == RESUME) {
                     // 播放
                     try {
-                        SelectUid su=new SelectUid ();
-                        int adds=su.getUid ();
-                        if (adds==0) {
-                            url = this.getClass ( ).getResourceAsStream ( "/b2.wav" );
-                        }else {
                             url = this.getClass ( ).getResourceAsStream ( "/a1.wav" );
-                        }
+
                         // 创建音频流对象
                         audioStream = new AudioStream ( url );
                         // 使用音频播放器播放声音
@@ -171,16 +166,7 @@ public class FirstMusicThread  implements MusicListener {
     public void destroy() {
         isRun = false;
         unListening ( );
-        poolExecutor.shutdown( );
-
-    }
-    public void chengmo(){
-        isRun=false;
-
-
-    }
-    public void  huifu(){
-        isRun=true;
+        secpoolExecutor.shutdown( );
 
     }
 

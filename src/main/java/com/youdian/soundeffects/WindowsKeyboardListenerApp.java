@@ -5,6 +5,7 @@ import com.sun.jna.platform.win32.WinDef;
 import com.sun.jna.platform.win32.WinUser;
 import com.youdian.soundeffects.hkq.FirstMusicThread;
 import com.youdian.soundeffects.hkq.RegisterUI;
+import com.youdian.soundeffects.hkq.SecondMusicThread;
 import com.youdian.soundeffects.hkq.WindowsKeyboardListener;
 
 
@@ -15,9 +16,10 @@ import com.youdian.soundeffects.hkq.WindowsKeyboardListener;
  */
 @SuppressWarnings("all")
 public class WindowsKeyboardListenerApp {
-    private RegisterUI registerUI;
+
     private WindowsKeyboardListener keyboardListener;
     private FirstMusicThread firstMusicThread;
+    private SecondMusicThread secondMusicThread;
 
 
     /**
@@ -28,17 +30,15 @@ public class WindowsKeyboardListenerApp {
      */
 
     public void before() {
-        registerUI=new RegisterUI ();
+
         keyboardListener = new WindowsKeyboardListener ( );
         firstMusicThread = new FirstMusicThread ( );
-
+        secondMusicThread=new SecondMusicThread ();
 
     }
 
 
     public void listening() {
-        registerUI.init (  );
-        registerUI.listening ();
         keyboardListener.init ( );
         firstMusicThread.init (  );
 
@@ -52,10 +52,41 @@ public class WindowsKeyboardListenerApp {
                         case WinUser.WM_SYSKEYUP:
                         case WinUser.WM_SYSKEYDOWN:
                             System.err.println ( "in callback, key=" + info.vkCode );
+                            int codes=info.vkCode;
+                            switch (code) {
+                                case 1:
+                                    firstMusicThread.destroy ();
+                                    secondMusicThread.destroy ( );
+                                    break;
+                                case 88:
+                                    secondMusicThread.destroy ( );
+                                    break;
+                                case 87:
+                                    firstMusicThread.destroy ();
+                                case 28:
+                                case 42:
+                                case 57:
+                                case 39:
+                                    firstMusicThread.unListening ( );
+                                    secondMusicThread.resume ( );
+                                    break;
+                                case 60:
+                                    firstMusicThread = new FirstMusicThread ( );
+                                    firstMusicThread.huifu ( );
+                                    firstMusicThread.init ();
+                                    firstMusicThread.listening ();
+                                    firstMusicThread.resume ();
+                                    secondMusicThread=new SecondMusicThread ();
+                                    secondMusicThread.init ();
+                                    secondMusicThread.listening ();
+                                    secondMusicThread.resume ();
+                                    break;
+                                default:
+                            }
                             firstMusicThread.resume ( );
                             break;
                         default:
-                            break;
+
                     }
                 }
                 Pointer pointer = info.getPointer ( );
@@ -71,15 +102,16 @@ public class WindowsKeyboardListenerApp {
                 while (true) {
                     Thread.sleep ( 10000 );
                     keyboardListener.unListening ( );
-                    registerUI.destroy ();
                     firstMusicThread.unListening ();
                     System.out.println ( "停止" );
+                    Thread.sleep ( 5000 );
+                    System.out.println ( "重新运行" );
+                    keyboardListener.resume ( );
                 }
             } catch (InterruptedException e) {
                 e.printStackTrace ( );
             }
-            System.out.println ( "重新运行" );
-            keyboardListener.resume ( );
+
         } ).start ( );
 
 
@@ -97,7 +129,6 @@ public class WindowsKeyboardListenerApp {
         keyboardListener.destroy ( );
         firstMusicThread.unListening ( );
         firstMusicThread.destroy ( );
-        registerUI.unListening ();
-        registerUI.destroy ();
+
     }
 }

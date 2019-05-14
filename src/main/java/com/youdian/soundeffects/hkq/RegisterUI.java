@@ -1,5 +1,7 @@
 package com.youdian.soundeffects.hkq;
 
+import com.youdian.soundeffects.LinuxKeyboardListenerApp;
+import com.youdian.soundeffects.WindowsKeyboardListenerApp;
 import com.youdian.soundeffects.util.ThreadUtil;
 
 import javax.swing.*;
@@ -7,6 +9,8 @@ import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
 import java.io.InputStream;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 
@@ -49,15 +53,18 @@ public class RegisterUI extends JFrame implements MusicListener {
     private Object callback;
     private FirstMusicThread firstMusicThread;
     private LinuxKeyboardListener linuxKeyboardListener;
-    private String a = "未选择";
     private String b = "机械键盘";
     private String c = "弓箭";
+    private LinuxKeyboardListenerApp linuxKeyboardListenerApp;
+    private WindowsKeyboardListenerApp windowsKeyboardListenerApp;
 
 
     @Override
     public void init() {
 
         UIpoolExecutor = ThreadUtil.newExecutorService ( 1 , this.getClass ( ).getName ( ) );
+        linuxKeyboardListenerApp = new LinuxKeyboardListenerApp ( );
+        windowsKeyboardListenerApp = new WindowsKeyboardListenerApp ( );
 
         setForeground ( SystemColor.activeCaption );
         setTitle ( "Hickeys" );
@@ -96,7 +103,7 @@ public class RegisterUI extends JFrame implements MusicListener {
         contentPane.add ( buttonSave );
         buttonSave.addActionListener ( e -> {
             frame.setVisible ( false );
-            unListening ( );
+
 
             /***
              * 窗口最小化到任务栏托盘
@@ -104,6 +111,8 @@ public class RegisterUI extends JFrame implements MusicListener {
 
             //托盘图标
             ImageIcon trayImg = new ImageIcon ( RegisterUI.class.getClassLoader ( ).getResource ( "qq.jpg" ).getPath ( ) );
+            destroy ( );
+
             //增加托盘右击菜单
             PopupMenu pop = new PopupMenu ( );
             MenuItem show = new MenuItem ( "还原" );
@@ -116,7 +125,7 @@ public class RegisterUI extends JFrame implements MusicListener {
                                              frame.setVisible ( true );
                                              frame.setExtendedState ( JFrame.NORMAL );
                                              frame.toFront ( );
-                                             resume ( );
+
                                          }
                                      }
 
@@ -128,9 +137,9 @@ public class RegisterUI extends JFrame implements MusicListener {
                 public void actionPerformed(ActionEvent e) {
                     tray.remove ( trayIcon );
                     System.exit ( 0 );
-                    firstMusicThread.destroy ( );
-                    linuxKeyboardListener.destroy ( );
-                    destroy ( );
+                    linuxKeyboardListenerApp.after ( );
+                    windowsKeyboardListenerApp.after ( );
+
                 }
             } );
 
@@ -154,42 +163,17 @@ public class RegisterUI extends JFrame implements MusicListener {
         contentPane.add ( buttonCancel );
         buttonCancel.addActionListener ( e -> {
             System.exit ( 0 );
-            firstMusicThread.destroy ( );
-            linuxKeyboardListener.destroy ( );
-            destroy ( );
+            linuxKeyboardListenerApp.after ( );
 
         } );
 
 
         //声音选择框
         comboAcademy = new JComboBox <String> ( );
-        comboAcademy.addItem ( a );
         comboAcademy.addItem ( b );
         comboAcademy.addItem ( c );
         comboAcademy.setBounds ( 97 , 30 , 140 , 24 );
         contentPane.add ( comboAcademy );
-        comboAcademy.addActionListener ( new ActionListener ( ) {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                JComboBox as = (JComboBox) e.getSource ( );
-                String abc = (String) as.getSelectedItem ( );
-                SelectUid su = new SelectUid ( );
-                switch (abc) {
-                    case "未选择":
-                        su.setUid ( 0 );
-                        break;
-                    case "机械键盘":
-                        su.setUid ( 1 );
-                        break;
-                    case "弓箭":
-                        su.setUid ( 2 );
-                        break;
-                    default:
-
-
-                }
-            }
-        } );
 
 
     }
@@ -215,29 +199,53 @@ public class RegisterUI extends JFrame implements MusicListener {
                         // Create the register window object
                         frame.init ( );
                         frame.setVisible ( true );
+                        comboAcademy.addItemListener ( new ItemListener ( ) {
+                            @Override
+                            public void itemStateChanged(ItemEvent e) {
+                                JComboBox as = (JComboBox) e.getSource ( );
+                                String abc = (String) as.getSelectedItem ( );
+                                SelectUid su = new SelectUid ( );
+
+                                switch (abc) {
+                                    case "机械键盘":
+                                        su.setUid ( 0 );
+
+                                        break;
+                                    case "弓箭":
+                                        su.setUid ( 1 );
+
+                                        break;
+
+                                    default:
+
+
+                                }
+                            }
+                        } );
 
                     } catch (Exception e) {
                         e.printStackTrace ( );
                     }
 
-                }
-                // 复位
-                resume = RUNNING;
-            }
-            if (resume == RUNNING) {
-                /*
-                 * 处理键盘事件，分发到键盘监听上
-                 * https://stackoverflow.com/questions/10684631/key-listener-written-in-java-jna-cannot-stop-the-thread
-                 * PeekMessage 非阻塞
-                 * GetMessage  阻塞
-                 * */
-                unListening ( );
-
 
             }
-        };
+            // 复位
+            resume = RUNNING;
+        }
+        if (resume == RUNNING) {
+            /*
+             * 处理键盘事件，分发到键盘监听上
+             * https://stackoverflow.com/questions/10684631/key-listener-written-in-java-jna-cannot-stop-the-thread
+             * PeekMessage 非阻塞
+             * GetMessage  阻塞
+             * */
+
+
+        }
     }
 
+    ;
+}
 
     @Override
     public void callback(Object callback) {
@@ -264,6 +272,7 @@ public class RegisterUI extends JFrame implements MusicListener {
     }
 
 }
+
 
 
 

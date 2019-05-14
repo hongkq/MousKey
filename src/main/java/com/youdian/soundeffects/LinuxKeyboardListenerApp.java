@@ -4,6 +4,7 @@ package com.youdian.soundeffects;
 import com.youdian.soundeffects.hkq.FirstMusicThread;
 import com.youdian.soundeffects.hkq.LinuxKeyboardListener;
 import com.youdian.soundeffects.hkq.RegisterUI;
+import com.youdian.soundeffects.hkq.SecondMusicThread;
 
 /**
  * Linux环境键盘监听
@@ -12,61 +13,97 @@ import com.youdian.soundeffects.hkq.RegisterUI;
  */
 @SuppressWarnings("all")
 public class LinuxKeyboardListenerApp {
+    private RegisterUI registerUI;
     private LinuxKeyboardListener keyboardListener;
     private FirstMusicThread firstMusicThread;
-    private RegisterUI registerUI;
-
+    private SecondMusicThread secondMusicThread;
 
     public void before() {
         registerUI = new RegisterUI ( );
         keyboardListener = new LinuxKeyboardListener ( );
         firstMusicThread = new FirstMusicThread ( );
-
+        secondMusicThread = new SecondMusicThread ( );
 
     }
 
-
     public void listening() {
-        registerUI.init ();
-        registerUI.listening ();
-        keyboardListener.init ( );
-        firstMusicThread.init ( );
+        registerUI.init ( );
+        registerUI.listening ( );
+        try {
+            Thread.sleep ( 2000 );
+            keyboardListener.init ( );
+            firstMusicThread.init ( );
+            secondMusicThread.init ( );
+            keyboardListener.callback ( (type , nativeKeyEvent) -> {
+                switch (type) {
+                    case LinuxKeyboardListener.TYPED:
+                        break;
+                    case LinuxKeyboardListener.PRESSED:
+                        System.out.println ( "按下" + nativeKeyEvent.getKeyCode ( ) );
+                        int code = nativeKeyEvent.getKeyCode ( );
+                        switch (code) {
+                            case 1:
+                                firstMusicThread.destroy ();
+                                secondMusicThread.destroy ( );
+                                break;
+                            case 88:
+                                secondMusicThread.destroy ( );
+                                break;
+                            case 87:
+                                firstMusicThread.destroy ();
+                            case 28:
+                            case 42:
+                            case 57:
+                            case 39:
+                                firstMusicThread.unListening ( );
+                                secondMusicThread.resume ( );
+                                break;
+                            case 60:
+                                firstMusicThread = new FirstMusicThread ( );
+                                firstMusicThread.huifu ( );
+                                firstMusicThread.init ();
+                                firstMusicThread.listening ();
+                                firstMusicThread.resume ();
+                                secondMusicThread=new SecondMusicThread ();
+                                secondMusicThread.init ();
+                                secondMusicThread.listening ();
+                                secondMusicThread.resume ();
+                                break;
+                            default:
+                        }
+                        //开启音频播放
+                        firstMusicThread.resume ( );
 
-        keyboardListener.callback ( (type , nativeKeyEvent) -> {
-
-            switch (type) {
-                case LinuxKeyboardListener.TYPED:
-                    break;
-                case LinuxKeyboardListener.PRESSED:
-                    System.out.println ( "按下" + nativeKeyEvent.getKeyCode ( ) );
-                    //开启音频播放
-                     firstMusicThread.resume ( );
-
-                    // 按下q取消键盘监听
-                    if (nativeKeyEvent.getKeyCode ( ) == 16) {
-                        keyboardListener.unListening ( );
+                        // 按下q取消键盘监听
+                        if (nativeKeyEvent.getKeyCode ( ) == 16) {
+                            keyboardListener.unListening ( );
+                            firstMusicThread.unListening ( );
+                        }
+                        break;
+                    case LinuxKeyboardListener.RELEASED:
+                        System.out.println ( "弹起" + nativeKeyEvent.getKeyCode ( ) );
                         firstMusicThread.unListening ( );
-                    }
-                    break;
-                case LinuxKeyboardListener.RELEASED:
-                    System.out.println ( "弹起" + nativeKeyEvent.getKeyCode ( ) );
+                        break;
+                    default:
+                }
+            } );
 
-                    firstMusicThread.unListening ( );
-                    break;
-                default:
-            }
-        } );
-        keyboardListener.listening ( );
-        firstMusicThread.listening ();
-
+            keyboardListener.listening ( );
+            firstMusicThread.listening ( );
+            secondMusicThread.listening ( );
+        } catch (InterruptedException e1) {
+            e1.printStackTrace ( );
+        }
         new Thread ( () -> {
             while (true) {
                 try {
 
-                    Thread.sleep ( 5000 );
-                    keyboardListener.unListening ();
-                    firstMusicThread.unListening ();
-                    registerUI.destroy ();
+                    Thread.sleep ( 6000 );
+                    keyboardListener.unListening ( );
+                    firstMusicThread.unListening ( );
+                    secondMusicThread.unListening ( );
+                    registerUI.destroy ( );
+                    registerUI.unListening ( );
 
                 } catch (InterruptedException e) {
                     e.printStackTrace ( );
@@ -80,6 +117,7 @@ public class LinuxKeyboardListenerApp {
         while (true) {
 
         }
+
     }
 
     public void after() {
@@ -87,7 +125,10 @@ public class LinuxKeyboardListenerApp {
         keyboardListener.destroy ( );
         firstMusicThread.unListening ( );
         firstMusicThread.destroy ( );
-        registerUI.unListening ( );
+        RegisterUI registerUI = new RegisterUI ( );
         registerUI.destroy ( );
+        registerUI.unListening ( );
+        secondMusicThread.unListening ( );
+        secondMusicThread.destroy ( );
     }
 }

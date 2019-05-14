@@ -39,6 +39,7 @@ public interface MusicListener<T> {
      * 结束
      */
     void destroy();
+
 }
 
 
