@@ -79,6 +79,16 @@ public class RegisterUI extends JFrame implements MusicListener {
         this.setResizable ( false );
         this.getRootPane ( ).setWindowDecorationStyle ( JRootPane.PLAIN_DIALOG );
 
+        JMenuItem fileMenu=new JMenuItem ( "关于我们" );
+        contentPane.add ( fileMenu );
+        fileMenu.addActionListener ( new ActionListener ( ) {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog ( RegisterUI.this,"《Hickeys》是一款基于Windows/Linux系统的电脑键盘音效软件。开发初衷是：想在敲写代码时可以有不同的音效效果，在枯燥的代码编程路上能找到不一样的乐趣体验，让代码更有趣！这款软件使用Java作为开发语言","关于",JOptionPane.PLAIN_MESSAGE );
+            }
+        } );
+
+
         labelAcademic = new JLabel ( "选择声音：" );
         labelAcademic.setBounds ( 30 , 30 , 72 , 18 );
         contentPane.add ( labelAcademic );
@@ -225,6 +235,23 @@ public class RegisterUI extends JFrame implements MusicListener {
 
                     } catch (Exception e) {
                         e.printStackTrace ( );
+                    }
+                    //Nimbus or Windows改变风格
+                    try {
+                        for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels ( )) {
+                            if ("Nimbus".equals ( info.getName ( ) )) {
+                                javax.swing.UIManager.setLookAndFeel ( info.getClassName ( ) );
+                                break;
+                            }
+                        }
+                    } catch (ClassNotFoundException ex) {
+                        java.util.logging.Logger.getLogger ( RegisterUI.class.getName ( ) ).log ( java.util.logging.Level.SEVERE , null , ex );
+                    } catch (InstantiationException ex) {
+                        java.util.logging.Logger.getLogger ( RegisterUI.class.getName ( ) ).log ( java.util.logging.Level.SEVERE , null , ex );
+                    } catch (IllegalAccessException ex) {
+                        java.util.logging.Logger.getLogger ( RegisterUI.class.getName ( ) ).log ( java.util.logging.Level.SEVERE , null , ex );
+                    } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+                        java.util.logging.Logger.getLogger ( RegisterUI.class.getName ( ) ).log ( java.util.logging.Level.SEVERE , null , ex );
                     }
 
 

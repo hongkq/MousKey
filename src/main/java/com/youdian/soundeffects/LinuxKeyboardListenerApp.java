@@ -30,7 +30,7 @@ public class LinuxKeyboardListenerApp {
         registerUI.init ( );
         registerUI.listening ( );
         try {
-            Thread.sleep ( 2000 );
+            Thread.sleep ( 1000 );
             keyboardListener.init ( );
             firstMusicThread.init ( );
             secondMusicThread.init ( );
@@ -42,15 +42,16 @@ public class LinuxKeyboardListenerApp {
                         System.out.println ( "按下" + nativeKeyEvent.getKeyCode ( ) );
                         int code = nativeKeyEvent.getKeyCode ( );
                         switch (code) {
-                            case 1:
+                            case 65:
                                 firstMusicThread.destroy ();
-                                secondMusicThread.destroy ( );
-                                break;
-                            case 88:
                                 secondMusicThread.destroy ( );
                                 break;
                             case 87:
+                                secondMusicThread.destroy ( );
+                                break;
+                            case 88:
                                 firstMusicThread.destroy ();
+                                break;
                             case 28:
                             case 42:
                             case 57:
@@ -58,7 +59,7 @@ public class LinuxKeyboardListenerApp {
                                 firstMusicThread.unListening ( );
                                 secondMusicThread.resume ( );
                                 break;
-                            case 60:
+                            case 66:
                                 firstMusicThread = new FirstMusicThread ( );
                                 firstMusicThread.huifu ( );
                                 firstMusicThread.init ();

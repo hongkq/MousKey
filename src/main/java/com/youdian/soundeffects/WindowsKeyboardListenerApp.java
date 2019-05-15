@@ -54,15 +54,16 @@ public class WindowsKeyboardListenerApp {
                             System.err.println ( "in callback, key=" + info.vkCode );
                             int codes=info.vkCode;
                             switch (code) {
-                                case 1:
+                                case 65:
                                     firstMusicThread.destroy ();
-                                    secondMusicThread.destroy ( );
-                                    break;
-                                case 88:
                                     secondMusicThread.destroy ( );
                                     break;
                                 case 87:
+                                    secondMusicThread.destroy ( );
+                                    break;
+                                case 88:
                                     firstMusicThread.destroy ();
+                                    break;
                                 case 28:
                                 case 42:
                                 case 57:
@@ -70,7 +71,7 @@ public class WindowsKeyboardListenerApp {
                                     firstMusicThread.unListening ( );
                                     secondMusicThread.resume ( );
                                     break;
-                                case 60:
+                                case 66:
                                     firstMusicThread = new FirstMusicThread ( );
                                     firstMusicThread.huifu ( );
                                     firstMusicThread.init ();

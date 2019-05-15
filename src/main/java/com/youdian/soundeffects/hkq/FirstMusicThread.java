@@ -90,13 +90,9 @@ public class FirstMusicThread implements MusicListener {
                 if (resume == RESUME) {
                     // 播放
                     try {
-                        SelectUid su = new SelectUid ( );
-                        int adds = su.getUid ( );
-                        if (adds == 0) {
+                        
                             url = this.getClass ( ).getResourceAsStream ( "/b2.wav" );
-                        } else {
-                            url = this.getClass ( ).getResourceAsStream ( "/a1.wav" );
-                        }
+
                         // 创建音频流对象
                         audioStream = new AudioStream ( url );
                         // 使用音频播放器播放声音
