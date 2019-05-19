@@ -5,7 +5,6 @@ import com.sun.jna.platform.win32.WinDef;
 import com.sun.jna.platform.win32.WinUser;
 import com.youdian.soundeffects.hkq.FirstMusicThread;
 import com.youdian.soundeffects.hkq.RegisterUI;
-import com.youdian.soundeffects.hkq.SecondMusicThread;
 import com.youdian.soundeffects.hkq.WindowsKeyboardListener;
 
 
@@ -16,10 +15,8 @@ import com.youdian.soundeffects.hkq.WindowsKeyboardListener;
  */
 @SuppressWarnings("all")
 public class WindowsKeyboardListenerApp {
-
     private WindowsKeyboardListener keyboardListener;
     private FirstMusicThread firstMusicThread;
-    private SecondMusicThread secondMusicThread;
 
 
     /**
@@ -30,15 +27,17 @@ public class WindowsKeyboardListenerApp {
      */
 
     public void before() {
-
         keyboardListener = new WindowsKeyboardListener ( );
         firstMusicThread = new FirstMusicThread ( );
-        secondMusicThread=new SecondMusicThread ();
+
 
     }
 
 
     public void listening() {
+
+        try {
+            Thread.sleep ( 1000 );
         keyboardListener.init ( );
         firstMusicThread.init (  );
 
@@ -56,10 +55,10 @@ public class WindowsKeyboardListenerApp {
                             switch (code) {
                                 case 65:
                                     firstMusicThread.destroy ();
-                                    secondMusicThread.destroy ( );
+
                                     break;
                                 case 87:
-                                    secondMusicThread.destroy ( );
+
                                     break;
                                 case 88:
                                     firstMusicThread.destroy ();
@@ -69,7 +68,7 @@ public class WindowsKeyboardListenerApp {
                                 case 57:
                                 case 39:
                                     firstMusicThread.unListening ( );
-                                    secondMusicThread.resume ( );
+
                                     break;
                                 case 66:
                                     firstMusicThread = new FirstMusicThread ( );
@@ -77,10 +76,7 @@ public class WindowsKeyboardListenerApp {
                                     firstMusicThread.init ();
                                     firstMusicThread.listening ();
                                     firstMusicThread.resume ();
-                                    secondMusicThread=new SecondMusicThread ();
-                                    secondMusicThread.init ();
-                                    secondMusicThread.listening ();
-                                    secondMusicThread.resume ();
+
                                     break;
                                 default:
                             }
@@ -96,6 +92,12 @@ public class WindowsKeyboardListenerApp {
             };
             return keyboardHook;
         } );
+        } catch (InterruptedException e) {
+            e.printStackTrace ( );
+        }
+
+        keyboardListener.listening ( );
+        firstMusicThread.listening ( );
 
         // 测试停止后运行
         new Thread ( () -> {
@@ -106,19 +108,15 @@ public class WindowsKeyboardListenerApp {
                     firstMusicThread.unListening ();
                     System.out.println ( "停止" );
                     Thread.sleep ( 5000 );
-                    System.out.println ( "重新运行" );
-                    keyboardListener.resume ( );
                 }
             } catch (InterruptedException e) {
                 e.printStackTrace ( );
             }
-
+            System.out.println ( "重新运行" );
+            keyboardListener.resume ( );
         } ).start ( );
 
 
-        keyboardListener.listening ( );
-        firstMusicThread.listening ( );
-        secondMusicThread.listening ();
         while (true) {
             // 阻塞
         }

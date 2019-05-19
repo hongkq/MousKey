@@ -4,7 +4,6 @@ package com.youdian.soundeffects;
 import com.youdian.soundeffects.hkq.FirstMusicThread;
 import com.youdian.soundeffects.hkq.LinuxKeyboardListener;
 import com.youdian.soundeffects.hkq.RegisterUI;
-import com.youdian.soundeffects.hkq.SecondMusicThread;
 
 /**
  * Linux环境键盘监听
@@ -13,27 +12,24 @@ import com.youdian.soundeffects.hkq.SecondMusicThread;
  */
 @SuppressWarnings("all")
 public class LinuxKeyboardListenerApp {
-    private RegisterUI registerUI;
     private LinuxKeyboardListener keyboardListener;
     private FirstMusicThread firstMusicThread;
-    private SecondMusicThread secondMusicThread;
+
 
     public void before() {
-        registerUI = new RegisterUI ( );
+
         keyboardListener = new LinuxKeyboardListener ( );
         firstMusicThread = new FirstMusicThread ( );
-        secondMusicThread = new SecondMusicThread ( );
+
 
     }
 
     public void listening() {
-        registerUI.init ( );
-        registerUI.listening ( );
         try {
             Thread.sleep ( 1000 );
             keyboardListener.init ( );
             firstMusicThread.init ( );
-            secondMusicThread.init ( );
+
             keyboardListener.callback ( (type , nativeKeyEvent) -> {
                 switch (type) {
                     case LinuxKeyboardListener.TYPED:
@@ -42,12 +38,12 @@ public class LinuxKeyboardListenerApp {
                         System.out.println ( "按下" + nativeKeyEvent.getKeyCode ( ) );
                         int code = nativeKeyEvent.getKeyCode ( );
                         switch (code) {
-                            case 65:
+                            case 1:
                                 firstMusicThread.destroy ();
-                                secondMusicThread.destroy ( );
+
                                 break;
                             case 87:
-                                secondMusicThread.destroy ( );
+
                                 break;
                             case 88:
                                 firstMusicThread.destroy ();
@@ -57,7 +53,7 @@ public class LinuxKeyboardListenerApp {
                             case 57:
                             case 39:
                                 firstMusicThread.unListening ( );
-                                secondMusicThread.resume ( );
+
                                 break;
                             case 66:
                                 firstMusicThread = new FirstMusicThread ( );
@@ -65,10 +61,7 @@ public class LinuxKeyboardListenerApp {
                                 firstMusicThread.init ();
                                 firstMusicThread.listening ();
                                 firstMusicThread.resume ();
-                                secondMusicThread=new SecondMusicThread ();
-                                secondMusicThread.init ();
-                                secondMusicThread.listening ();
-                                secondMusicThread.resume ();
+
                                 break;
                             default:
                         }
@@ -79,6 +72,8 @@ public class LinuxKeyboardListenerApp {
                         if (nativeKeyEvent.getKeyCode ( ) == 16) {
                             keyboardListener.unListening ( );
                             firstMusicThread.unListening ( );
+
+
                         }
                         break;
                     case LinuxKeyboardListener.RELEASED:
@@ -91,7 +86,7 @@ public class LinuxKeyboardListenerApp {
 
             keyboardListener.listening ( );
             firstMusicThread.listening ( );
-            secondMusicThread.listening ( );
+
         } catch (InterruptedException e1) {
             e1.printStackTrace ( );
         }
@@ -102,9 +97,7 @@ public class LinuxKeyboardListenerApp {
                     Thread.sleep ( 6000 );
                     keyboardListener.unListening ( );
                     firstMusicThread.unListening ( );
-                    secondMusicThread.unListening ( );
-                    registerUI.destroy ( );
-                    registerUI.unListening ( );
+
 
                 } catch (InterruptedException e) {
                     e.printStackTrace ( );
@@ -122,14 +115,15 @@ public class LinuxKeyboardListenerApp {
     }
 
     public void after() {
-        keyboardListener.unListening ( );
         keyboardListener.destroy ( );
-        firstMusicThread.unListening ( );
         firstMusicThread.destroy ( );
-        RegisterUI registerUI = new RegisterUI ( );
-        registerUI.destroy ( );
-        registerUI.unListening ( );
-        secondMusicThread.unListening ( );
-        secondMusicThread.destroy ( );
+        keyboardListener.unListening ( );
+
+        firstMusicThread.unListening ( );
+
+
+
+
+     
     }
 }

@@ -90,7 +90,7 @@ public class FirstMusicThread implements MusicListener {
                 if (resume == RESUME) {
                     // 播放
                     try {
-                        
+
                             url = this.getClass ( ).getResourceAsStream ( "/b2.wav" );
 
                         // 创建音频流对象

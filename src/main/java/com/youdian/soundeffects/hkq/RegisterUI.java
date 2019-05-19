@@ -79,15 +79,6 @@ public class RegisterUI extends JFrame implements MusicListener {
         this.setResizable ( false );
         this.getRootPane ( ).setWindowDecorationStyle ( JRootPane.PLAIN_DIALOG );
 
-        JMenuItem fileMenu=new JMenuItem ( "关于我们" );
-        contentPane.add ( fileMenu );
-        fileMenu.addActionListener ( new ActionListener ( ) {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                JOptionPane.showMessageDialog ( RegisterUI.this,"《Hickeys》是一款基于Windows/Linux系统的电脑键盘音效软件。开发初衷是：想在敲写代码时可以有不同的音效效果，在枯燥的代码编程路上能找到不一样的乐趣体验，让代码更有趣！这款软件使用Java作为开发语言","关于",JOptionPane.PLAIN_MESSAGE );
-            }
-        } );
-
 
         labelAcademic = new JLabel ( "选择声音：" );
         labelAcademic.setBounds ( 30 , 30 , 72 , 18 );
@@ -121,7 +112,7 @@ public class RegisterUI extends JFrame implements MusicListener {
 
             //托盘图标
             ImageIcon trayImg = new ImageIcon ( RegisterUI.class.getClassLoader ( ).getResource ( "qq.jpg" ).getPath ( ) );
-            destroy ( );
+
 
             //增加托盘右击菜单
             PopupMenu pop = new PopupMenu ( );
@@ -181,7 +172,6 @@ public class RegisterUI extends JFrame implements MusicListener {
         //声音选择框
         comboAcademy = new JComboBox <String> ( );
         comboAcademy.addItem ( b );
-        comboAcademy.addItem ( c );
         comboAcademy.setBounds ( 97 , 30 , 140 , 24 );
         contentPane.add ( comboAcademy );
 
@@ -209,29 +199,6 @@ public class RegisterUI extends JFrame implements MusicListener {
                         // Create the register window object
                         frame.init ( );
                         frame.setVisible ( true );
-                        comboAcademy.addItemListener ( new ItemListener ( ) {
-                            @Override
-                            public void itemStateChanged(ItemEvent e) {
-                                JComboBox as = (JComboBox) e.getSource ( );
-                                String abc = (String) as.getSelectedItem ( );
-                                SelectUid su = new SelectUid ( );
-
-                                switch (abc) {
-                                    case "机械键盘":
-                                        su.setUid ( 0 );
-
-                                        break;
-                                    case "弓箭":
-                                        su.setUid ( 1 );
-
-                                        break;
-
-                                    default:
-
-
-                                }
-                            }
-                        } );
 
                     } catch (Exception e) {
                         e.printStackTrace ( );
@@ -239,7 +206,7 @@ public class RegisterUI extends JFrame implements MusicListener {
                     //Nimbus or Windows改变风格
                     try {
                         for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels ( )) {
-                            if ("Nimbus".equals ( info.getName ( ) )) {
+                            if ("Windows".equals ( info.getName ( ) )) {
                                 javax.swing.UIManager.setLookAndFeel ( info.getClassName ( ) );
                                 break;
                             }
