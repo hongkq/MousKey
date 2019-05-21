@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.youdian.keytone.client">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true">
+        <activity
+            android:name=".activity.RemotePCDroidControlActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity
+            android:name=".activity.RemotePCDroidInit"
+            android:label="@string/app_name"
+            android:noHistory="true">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN"></action>
+                <category
+                    android:name="android.intent.category.LAUNCHER"></category>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.RemotePCDroidSettingsActivity"
+            android:label="@string/text_settings"></activity>
+        <activity
+            android:name=".activity.RemotePCDroidFEActivity"
+            android:label="@string/text_file_explorer"></activity>
+        <activity
+            android:name=".activity.RemotePCDroidShortcutsActivity"
+            android:label="@string/text_shortcuts"></activity>
+        <activity
+            android:label="@string/text_connections"
+            android:name=".activity.connection.RemotePCDroidConnListActivity"></activity>
+        <activity
+            android:label="@string/text_connections"
+            android:name=".activity.connection.RemotePCDroidConnEditActivity"></activity>
+        <activity
+            android:name=".activity.connection.RemotePCDroidConnWifiEditActivity"
+            android:label="@string/text_wifi"></activity>
+
+    </application>
+    <supports-screens
+        android:smallScreens="true"
+        android:anyDensity="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:largeScreens="true"></supports-screens>
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+
+
+</manifest>
