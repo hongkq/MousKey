@@ -18,95 +18,95 @@ public class LinuxKeyboardListenerApp {
 
     public void before() {
 
-        keyboardListener = new LinuxKeyboardListener ( );
-        firstMusicThread = new FirstMusicThread ( );
+        keyboardListener = new LinuxKeyboardListener();
+        firstMusicThread = new FirstMusicThread();
 
 
     }
 
     public void listening() {
         try {
-            Thread.sleep ( 1000 );
-            keyboardListener.init ( );
-            firstMusicThread.init ( );
+            Thread.sleep(1000);
+            keyboardListener.init();
+            firstMusicThread.init();
 
-            keyboardListener.callback ( (type , nativeKeyEvent) -> {
+            keyboardListener.callback((type, nativeKeyEvent) -> {
                 switch (type) {
                     case LinuxKeyboardListener.TYPED:
                         break;
                     case LinuxKeyboardListener.PRESSED:
-                        System.out.println ( "按下" + nativeKeyEvent.getKeyCode ( ) );
-                        int code = nativeKeyEvent.getKeyCode ( );
+                        System.out.println("按下" + nativeKeyEvent.getKeyCode());
+                        int code = nativeKeyEvent.getKeyCode();
                         switch (code) {
                             case 1:
-                                firstMusicThread.destroy ();
+                                firstMusicThread.destroy();
 
                                 break;
                             case 87:
 
                                 break;
                             case 88:
-                                firstMusicThread.destroy ();
+                                firstMusicThread.destroy();
                                 break;
                             case 28:
                             case 42:
                             case 57:
                             case 39:
-                                firstMusicThread.unListening ( );
+                                firstMusicThread.unListening();
 
                                 break;
                             case 66:
-                                firstMusicThread = new FirstMusicThread ( );
-                                firstMusicThread.huifu ( );
-                                firstMusicThread.init ();
-                                firstMusicThread.listening ();
-                                firstMusicThread.resume ();
+                                firstMusicThread = new FirstMusicThread();
+                                firstMusicThread.huifu();
+                                firstMusicThread.init();
+                                firstMusicThread.listening();
+                                firstMusicThread.resume();
 
                                 break;
                             default:
                         }
                         //开启音频播放
-                        firstMusicThread.resume ( );
+                        firstMusicThread.resume();
 
                         // 按下q取消键盘监听
-                        if (nativeKeyEvent.getKeyCode ( ) == 16) {
-                            keyboardListener.unListening ( );
-                            firstMusicThread.unListening ( );
+                        if (nativeKeyEvent.getKeyCode() == 16) {
+                            keyboardListener.unListening();
+                            firstMusicThread.unListening();
 
 
                         }
                         break;
                     case LinuxKeyboardListener.RELEASED:
-                        System.out.println ( "弹起" + nativeKeyEvent.getKeyCode ( ) );
-                        firstMusicThread.unListening ( );
+                        System.out.println("弹起" + nativeKeyEvent.getKeyCode());
+                        firstMusicThread.unListening();
                         break;
                     default:
                 }
-            } );
+            });
 
-            keyboardListener.listening ( );
-            firstMusicThread.listening ( );
+            keyboardListener.listening();
+            firstMusicThread.listening();
 
         } catch (InterruptedException e1) {
-            e1.printStackTrace ( );
+            e1.printStackTrace();
         }
-        new Thread ( () -> {
+        new Thread(() -> {
             while (true) {
                 try {
 
-                    Thread.sleep ( 6000 );
-                    keyboardListener.unListening ( );
-                    firstMusicThread.unListening ( );
+                    Thread.sleep(6000);
+                    keyboardListener.unListening();
+                    firstMusicThread.unListening();
 
 
                 } catch (InterruptedException e) {
-                    e.printStackTrace ( );
+                    e.printStackTrace();
                 }
-                keyboardListener.resume ( );
+                keyboardListener.resume();
 
-                System.out.println ( "测试自动恢复" );
+                System.out.println("测试自动恢复");
             }
-        } ).start ( );
+        }).start();
 
         while (true) {
 
@@ -115,15 +115,12 @@ public class LinuxKeyboardListenerApp {
     }
 
     public void after() {
-        keyboardListener.destroy ( );
-        firstMusicThread.destroy ( );
-        keyboardListener.unListening ( );
+        keyboardListener.destroy();
+        firstMusicThread.destroy();
+        keyboardListener.unListening();
 
-        firstMusicThread.unListening ( );
-
-
+        firstMusicThread.unListening();
 
 
-     
     }
 }

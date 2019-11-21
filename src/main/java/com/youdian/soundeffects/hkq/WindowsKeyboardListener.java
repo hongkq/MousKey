@@ -15,7 +15,7 @@ import java.util.function.Function;
  *
  * @author hkq
  */
-public class WindowsKeyboardListener implements KeyboardListener <Function <User32.HHOOK, User32.LowLevelKeyboardProc>> {
+public class WindowsKeyboardListener implements KeyboardListener<Function<User32.HHOOK, User32.LowLevelKeyboardProc>> {
 
 
     /**
@@ -42,23 +42,23 @@ public class WindowsKeyboardListener implements KeyboardListener <Function <User
     @Override
     public void init() {
         lib = User32.INSTANCE;
-        hModule = Kernel32.INSTANCE.GetModuleHandle ( null );
-        executorService = ThreadUtil.newExecutorService ( 1 , this.getClass ( ).getSimpleName ( ) );
+        hModule = Kernel32.INSTANCE.GetModuleHandle(null);
+        executorService = ThreadUtil.newExecutorService(1, this.getClass().getSimpleName());
     }
 
     @Override
     public void listening() {
         if (runnable == null) {
-            newTask ( );
-            executorService.submit ( runnable );
+            newTask();
+            executorService.submit(runnable);
         } else {
-            throw new IllegalArgumentException ( "listening() 仅允许执行一次" );
+            throw new IllegalArgumentException("listening() 仅允许执行一次");
         }
     }
 
     @Override
-    public void callback(Function <User32.HHOOK, User32.LowLevelKeyboardProc> callback) {
-        this.keyboardHook = callback.apply ( hhk );
+    public void callback(Function<User32.HHOOK, User32.LowLevelKeyboardProc> callback) {
+        this.keyboardHook = callback.apply(hhk);
     }
 
 
@@ -67,11 +67,11 @@ public class WindowsKeyboardListener implements KeyboardListener <Function <User
      */
     private void newTask() {
         runnable = () -> {
-            User32.MSG msg = new User32.MSG ( );
+            User32.MSG msg = new User32.MSG();
             while (isRun) {
                 if (resume == RESUME) {
                     // 监听
-                    hhk = lib.SetWindowsHookEx ( WinUser.WH_KEYBOARD_LL , keyboardHook , hModule , 0 );
+                    hhk = lib.SetWindowsHookEx(WinUser.WH_KEYBOARD_LL, keyboardHook, hModule, 0);
                     // 复位
                     resume = RUNNING;
                 }
@@ -82,7 +82,7 @@ public class WindowsKeyboardListener implements KeyboardListener <Function <User
                      * PeekMessage 非阻塞
                      * GetMessage  阻塞
                      * */
-                    lib.PeekMessage ( msg , null , 0 , 0 , 0 );
+                    lib.PeekMessage(msg, null, 0, 0, 0);
                 }
             }
         };
@@ -93,7 +93,7 @@ public class WindowsKeyboardListener implements KeyboardListener <Function <User
      */
     @Override
     public void unListening() {
-        lib.UnhookWindowsHookEx ( hhk );
+        lib.UnhookWindowsHookEx(hhk);
         resume = STOP;
     }
 
@@ -111,8 +111,8 @@ public class WindowsKeyboardListener implements KeyboardListener <Function <User
     @Override
     public void destroy() {
         isRun = false;
-        unListening ( );
-        executorService.shutdown ( );
+        unListening();
+        executorService.shutdown();
     }
 
 }

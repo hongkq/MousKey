@@ -48,7 +48,7 @@ public class FirstMusicThread implements MusicListener {
     public void init() {
         url = null;
         audioStream = null;
-        poolExecutor = ThreadUtil.newExecutorService ( 1 , this.getClass ( ).getName ( ) );
+        poolExecutor = ThreadUtil.newExecutorService(1, this.getClass().getName());
 
 
     }
@@ -60,10 +60,10 @@ public class FirstMusicThread implements MusicListener {
     public void listening() {
 
         if (runnable == null) {
-            newTask ( );
-            poolExecutor.submit ( runnable );
+            newTask();
+            poolExecutor.submit(runnable);
         } else {
-            throw new IllegalArgumentException ( "listening() 仅允许执行一次" );
+            throw new IllegalArgumentException("listening() 仅允许执行一次");
         }
 
     }
@@ -91,31 +91,31 @@ public class FirstMusicThread implements MusicListener {
                     // 播放
                     try {
 
-                            url = this.getClass ( ).getResourceAsStream ( "/b2.wav" );
+                        url = this.getClass().getResourceAsStream("/b2.wav");
 
                         // 创建音频流对象
-                        audioStream = new AudioStream ( url );
+                        audioStream = new AudioStream(url);
                         // 使用音频播放器播放声音
-                        AudioPlayer.player.start ( audioStream );
+                        AudioPlayer.player.start(audioStream);
 
 
                     } catch (FileNotFoundException e) {
-                        e.printStackTrace ( );
+                        e.printStackTrace();
                     } catch (IOException e) {
-                        e.printStackTrace ( );
+                        e.printStackTrace();
                     } finally {
                         //如果资源为空，关闭资源
                         try {
-                            unListening ( );
+                            unListening();
                             if (url == null) {
-                                url.close ( );
+                                url.close();
                             }
                             if (audioStream == null) {
-                                audioStream.close ( );
+                                audioStream.close();
                             }
 
                         } catch (IOException e) {
-                            e.printStackTrace ( );
+                            e.printStackTrace();
                         }
 
                     }
@@ -164,8 +164,8 @@ public class FirstMusicThread implements MusicListener {
     @Override
     public void destroy() {
         isRun = false;
-        unListening ( );
-        poolExecutor.shutdown ( );
+        unListening();
+        poolExecutor.shutdown();
 
     }
 
