@@ -1,304 +1,124 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AnalysisUIOptions">
-    <option name="GROUP_BY_SEVERITY" value="true" />
-  </component>
-  <component name="ArtifactsWorkspaceSettings">
-    <artifacts-to-build>
-      <artifact name="MousKey:jar" />
-    </artifacts-to-build>
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="19d1d6b0-1be7-4da4-9593-cf0869b107be" name="Default Changelist" comment="">
+    <list default="true" id="aac4089c-2ca0-474e-83ed-0a8ea78f3144" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/$PRODUCT_WORKSPACE_FILE$" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sound-effects.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/MousKey_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/hkq.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_1stleg_jnativehook_2_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_beust_jcommander_1_72.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_java_dev_jna_jna_5_3_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_java_dev_jna_jna_platform_5_3_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_bluecove_bluecove_2_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_bluecove_bluecove_gpl_2_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_testng_testng_7_0_0_beta4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/app/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/app/src/androidTest/java/com/youdian/keytone/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/app/src/main/java/com/youdian/keytone/client/activity/RemotePCDroidControlActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/app/src/main/java/com/youdian/keytone/client/activity/RemotePCDroidFEActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/app/src/main/java/com/youdian/keytone/client/activity/RemotePCDroidInit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/app/src/main/java/com/youdian/keytone/client/activity/RemotePCDroidSettingsActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/app/src/main/java/com/youdian/keytone/client/activity/RemotePCDroidShortcutsActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/app/src/main/java/com/youdian/keytone/client/activity/connection/RemotePCDroidConnEditActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/app/src/main/java/com/youdian/keytone/client/activity/connection/RemotePCDroidConnListActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/app/src/main/java/com/youdian/keytone/client/activity/connection/RemotePCDroidConnWifiEditActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/app/src/main/java/com/youdian/keytone/client/app/RemotePCDroid.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/app/src/main/java/com/youdian/keytone/client/connection/Connection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/app/src/main/java/com/youdian/keytone/client/connection/ConnectionList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/app/src/main/java/com/youdian/keytone/client/connection/ConnectionWifi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/app/src/main/java/com/youdian/keytone/protocol/RemotePCDroidActionReceiver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/app/src/main/java/com/youdian/keytone/protocol/RemotePCDroidConnection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/app/src/main/java/com/youdian/keytone/protocol/action/AuthenticationAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/app/src/main/java/com/youdian/keytone/protocol/action/AuthenticationResponseAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/app/src/main/java/com/youdian/keytone/protocol/action/FileExploreRequestAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/app/src/main/java/com/youdian/keytone/protocol/action/FileExploreResponseAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/app/src/main/java/com/youdian/keytone/protocol/action/HibernateAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/app/src/main/java/com/youdian/keytone/protocol/action/MouseKeyboardAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/app/src/main/java/com/youdian/keytone/protocol/action/RebootAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/app/src/main/java/com/youdian/keytone/protocol/action/RemotePCDroidAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/app/src/main/java/com/youdian/keytone/protocol/action/ShutDownAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/app/src/main/java/com/youdian/keytone/protocol/tcp/RemotePCDroidConnectionTcp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/app/src/main/res/drawable-v24/button.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/app/src/main/res/drawable-v24/wifi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/app/src/main/res/drawable/icon.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/app/src/main/res/layout/connection.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/app/src/main/res/layout/connectionwifiedit.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/app/src/main/res/layout/control.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/app/src/main/res/layout/fsexplorer.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/app/src/main/res/layout/init.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/app/src/main/res/layout/shortcuts.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/app/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/app/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/app/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/app/src/main/res/xml/settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/app/src/test/java/com/youdian/keytone/ExampleUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keytone/settings.gradle" beforeDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/MousKey$RemotePCDroidServerApp.ic" NAME="RemotePCDroidServerApp Coverage Results" MODIFIED="1558081087389" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.youdian.soundeffects.remotepcdroidserver.*</FILTER>
-    </SUITE>
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/RemotePCDroidServerApp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="12" column="35" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/LinuxKeyboardListenerApp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="580">
-              <caret line="118" column="37" selection-start-line="118" selection-start-column="37" selection-end-line="118" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/protocol/RemotePCDroidActionReceiver.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="44" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/protocol/RemotePCDroidConnection.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="9" column="45" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="45" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/remotepcdroidserver/RemotePCDroidServer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="36" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/protocol/action/RebootAction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="9" column="25" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/protocol/action/RemotePCDroidAction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="10" column="41" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/remotepcdroidserver/RemotePCDroidServerConnection.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="21" column="34" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/protocol/action/ShutDownAction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="9" column="27" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/remotepcdroidserver/RemotePCDroidServerTcp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="16" column="56" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="56" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="HTML File" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/hkq/Music.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/util/ThreadUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/hkq/KeyBoardCallback.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/hkq/WindowsKeyboardListener.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/hkq/SystemUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/hkq/MusicUrl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/hkq/Selection.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/youdian/soundeffects/hkq/LinuxKeyboardListenerTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/youdian/soundeffects/hkq/WindowsKeyboardListenerTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/hkq/MusicSelection.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/wanye.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/hkq/KeyboardListener.java" />
-        <option value="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" />
-        <option value="$PROJECT_DIR$/mouskey.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/hkq/SelectUid.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/hkq/Itemevenst.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/hkq/MusicListener.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/hkq/SecondMusicThread.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/hkq/FirstMusicThread.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/App.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/remotepcdroidserver/RemotePCDroidConnectionTcp.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/action/MouseKeyboardAction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/RemotePCDroidActionReceiver.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/RemotePCDroidConnection.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/action/AuthenticationAction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/action/AuthenticationResponseAction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/tcp/RemotePCDroidConnectionTcp.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/gui/RemotePCDroidServerGui.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/hkq/LinuxKeyboardListener.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/remotepcdroidserver/RemotePCDroidServerApp.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/protocol/RemotePCDroidConnection.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/protocol/RemotePCDroidActionReceiver.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/protocol/tcp/RemotePCDroidConnectionTcp.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/protocol/action/AuthenticationAction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/protocol/action/FileExploreResponseAction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/protocol/action/HibernateAction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/protocol/action/MouseKeyboardAction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/protocol/action/RebootAction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/protocol/action/RemotePCDroidAction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/protocol/action/ShutDownAction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/remotepcdroidserver/RemotePCDroidServerTcp.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/remotepcdroidserver/RemotePCDroidServerConnection.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/remotepcdroidserver/RemotePCDroidServer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/hkq/RegisterUI.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/LinuxKeyboardListenerApp.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/remotepcdroidserver/gui/RemotePCDroidServerGui.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/WindowsKeyboardListenerApp.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/RemotePCDroidServerApp.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/protocol/action/AuthenticationResponseAction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/protocol/action/FileExploreRequestAction.java" />
-      </list>
-    </option>
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
-  <component name="MavenProjectNavigator">
-    <treeState>
-      <expand>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="sound-effects" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="sound-effects" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
-        </path>
-      </expand>
-      <select />
-    </treeState>
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="1296" />
-    <option name="y" value="256" />
-    <option name="width" value="1717" />
-    <option name="height" value="913" />
-  </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="MousKey" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MousKey" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="MousKey" type="58d84e3e:PackageViewProjectNode" />
-              <item name="MousKey" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="MousKey" type="58d84e3e:PackageViewProjectNode" />
-              <item name="MousKey" type="616d4139:PackageViewModuleNode" />
-              <item name="com.youdian.soundeffects" type="1f31426a:PackageElementNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
-  </component>
+  <component name="ProjectId" id="1SdDUPR5XNp4eFsei4NNvmUIIMI" />
   <component name="PropertiesComponent">
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
-    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
-    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
-    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="mouskey" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558274856241" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/lib/RemotePCDroid-Server.jar!/" />
-    <property name="project.structure.last.edited" value="Artifacts" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/target/classes/com/youdian/soundeffects/remotepcdroidserver/gui" />
-      <recent name="$PROJECT_DIR$/target/classes/com/youdian/soundeffects/hkq" />
-      <recent name="$PROJECT_DIR$/src/main/resources" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/gui" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.youdian.soundeffects" />
-      <recent name="com.youdian.soundeffects.tcp" />
-      <recent name="com.youdian.soundeffects.gui" />
-      <recent name="com.youdian.soundeffects.hkq" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.youdian.soundeffects.remotepcdroidserver" />
-      <recent name="com.youdian.soundeffects.hkq" />
-    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -312,81 +132,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.RemotePCDroidServerApp (2)">
-    <configuration name="App (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.youdian.soundeffects.App" />
-      <module name="MousKey" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.youdian.soundeffects.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RemotePCDroidServerApp (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.techgaun.desktop.remotepcdroidserver.RemotePCDroidServerApp" />
-      <module name="MousKey" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.techgaun.desktop.remotepcdroidserver.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RemotePCDroidServerApp (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.youdian.soundeffects.RemotePCDroidServerApp" />
-      <module name="MousKey" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.youdian.soundeffects.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration name="RemotePCDroidServerApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.youdian.soundeffects.remotepcdroidserver.RemotePCDroidServerApp" />
-      <module name="MousKey" />
+      <option name="MAIN_CLASS_NAME" value="com.youdian.soundeffects.RemotePCDroidServerApp" />
+      <module name="sound-effects" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.youdian.soundeffects.remotepcdroidserver.*" />
+          <option name="PATTERN" value="com.youdian.soundeffects.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LinuxKeyboardListenerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MousKey" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.youdian.soundeffects.hkq.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.youdian.soundeffects.hkq" />
-      <option name="MAIN_CLASS_NAME" value="com.youdian.soundeffects.hkq.LinuxKeyboardListenerTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.RemotePCDroidServerApp (2)" />
         <item itemvalue="Application.RemotePCDroidServerApp" />
-        <item itemvalue="Application.RemotePCDroidServerApp (1)" />
-        <item itemvalue="Application.App (1)" />
-        <item itemvalue="JUnit.LinuxKeyboardListenerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -395,532 +157,27 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="19d1d6b0-1be7-4da4-9593-cf0869b107be" name="Default Changelist" comment="" />
-      <created>1556800919056</created>
+      <changelist id="aac4089c-2ca0-474e-83ed-0a8ea78f3144" name="Default Changelist" comment="" />
+      <created>1571884593148</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1556800919056</updated>
-      <workItem from="1556800920363" duration="2715000" />
-      <workItem from="1556853773532" duration="531000" />
-      <workItem from="1556941667782" duration="1823000" />
-      <workItem from="1557151883726" duration="1068000" />
-      <workItem from="1557319490572" duration="6472000" />
-      <workItem from="1557410445767" duration="553000" />
-      <workItem from="1557473927548" duration="15742000" />
-      <workItem from="1557495923309" duration="3713000" />
-      <workItem from="1557537293506" duration="30304000" />
-      <workItem from="1557625994635" duration="1879000" />
-      <workItem from="1557630899304" duration="373000" />
-      <workItem from="1557637193423" duration="27593000" />
-      <workItem from="1557669734403" duration="350000" />
-      <workItem from="1557735597475" duration="3658000" />
-      <workItem from="1557806356946" duration="11437000" />
-      <workItem from="1557822606897" duration="1298000" />
-      <workItem from="1557824704419" duration="2525000" />
-      <workItem from="1557827905368" duration="50000" />
-      <workItem from="1557828958263" duration="217000" />
-      <workItem from="1557830120728" duration="780000" />
-      <workItem from="1557831874224" duration="10211000" />
-      <workItem from="1557892885069" duration="7120000" />
-      <workItem from="1557971609533" duration="9651000" />
-      <workItem from="1558009597044" duration="7648000" />
-      <workItem from="1558055151584" duration="3460000" />
-      <workItem from="1558076827600" duration="744000" />
-      <workItem from="1558079072922" duration="2734000" />
-      <workItem from="1558081842101" duration="14039000" />
-      <workItem from="1558095996471" duration="1477000" />
-      <workItem from="1558156670572" duration="56000" />
-      <workItem from="1558158950661" duration="15000" />
-      <workItem from="1558164926949" duration="516000" />
-      <workItem from="1558187376745" duration="733000" />
-      <workItem from="1558224605789" duration="1985000" />
-      <workItem from="1558270273257" duration="2361000" />
-      <workItem from="1558326535471" duration="597000" />
+      <updated>1571884593148</updated>
+      <workItem from="1571884594639" duration="1320000" />
     </task>
     <servers />
-  </component>
-  <component name="TestHistory">
-    <history-entry file="LinuxKeyboardListenerTest - 2019.05.06 at 22h 18m 51s.xml">
-      <configuration name="LinuxKeyboardListenerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinuxKeyboardListenerTest - 2019.05.08 at 21h 13m 04s.xml">
-      <configuration name="LinuxKeyboardListenerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinuxKeyboardListenerTest - 2019.05.08 at 21h 18m 19s.xml">
-      <configuration name="LinuxKeyboardListenerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinuxKeyboardListenerTest - 2019.05.08 at 21h 22m 27s.xml">
-      <configuration name="LinuxKeyboardListenerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinuxKeyboardListenerTest - 2019.05.08 at 21h 32m 42s.xml">
-      <configuration name="LinuxKeyboardListenerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinuxKeyboardListenerTest - 2019.05.08 at 21h 36m 38s.xml">
-      <configuration name="LinuxKeyboardListenerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinuxKeyboardListenerTest - 2019.05.08 at 21h 37m 18s.xml">
-      <configuration name="LinuxKeyboardListenerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinuxKeyboardListenerTest - 2019.05.08 at 21h 44m 07s.xml">
-      <configuration name="LinuxKeyboardListenerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinuxKeyboardListenerTest - 2019.05.08 at 21h 45m 54s.xml">
-      <configuration name="LinuxKeyboardListenerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinuxKeyboardListenerTest - 2019.05.08 at 21h 47m 15s.xml">
-      <configuration name="LinuxKeyboardListenerTest" configurationId="JUnit" />
-    </history-entry>
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="176428000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="1296" y="256" width="1717" height="913" extended-state="0" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32605305" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49921995" weight="0.21483377" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.56630266" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50078005" side_tool="true" weight="0.3286908" />
-      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49921995" weight="0.32137287" />
-      <window_info anchor="bottom" id="Duplicate detector" order="13" visible="true" weight="0.37078652" />
-      <window_info anchor="bottom" id="Thumbnails" order="14" weight="0.32967034" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Maven" order="6" weight="0.46507463" />
-      <window_info anchor="right" id="Capture Analysis" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.5250212" />
-    </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21845238" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32605305" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49921995" visible="true" weight="0.5943838" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.033370413" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50078005" side_tool="true" weight="0.3286908" />
-      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49921995" weight="0.32137287" />
-      <window_info anchor="bottom" id="Duplicate detector" order="13" visible="true" weight="0.37078652" />
-      <window_info anchor="bottom" id="Thumbnails" order="14" weight="0.32967034" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Maven" order="6" weight="0.45654762" />
-      <window_info anchor="right" id="Capture Analysis" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.5250212" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/action/HibernateAction.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/action/MouseKeyboardAction.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/action/RebootAction.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/action/RemotePCDroidAction.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/action/ShutDownAction.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/action/FileExploreRequestAction.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/action/AuthenticationAction.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/tcp/RemotePCDroidConnectionTcp.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/icon.png" />
-    <entry file="jar://$USER_HOME$/opt/jdk1.8.0_201/src.zip!/java/awt/SystemTray.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="255" selection-start-line="255" selection-end-line="255" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/RemotePCDroidActionReceiver.java" />
-    <entry file="jar://$USER_HOME$/opt/jdk1.8.0_201/src.zip!/javax/imageio/ImageIO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="1352" column="25" lean-forward="true" selection-start-line="1352" selection-start-column="25" selection-end-line="1352" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/RemotePCDroidConnection.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/gui/RemotePCDroidServerGui.java" />
-    <entry file="jar://$USER_HOME$/opt/jdk1.8.0_201/src.zip!/java/awt/TrayIcon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="166" column="34" lean-forward="true" selection-start-line="166" selection-start-column="34" selection-end-line="166" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module_mouskey.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1326" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mouskey.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mouskey.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2568" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/App.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/hkq/SecondMusicThread.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/hkq/FirstMusicThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1170">
-          <caret line="144" column="13" selection-start-line="144" selection-start-column="13" selection-end-line="144" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/remotepcdroidserver/RemotePCDroidServerApp.java" />
-    <entry file="file://$PROJECT_DIR$/target/classes/com/youdian/soundeffects/remotepcdroidserver/gui/RemotePCDroidServerGui.class" />
-    <entry file="file://$PROJECT_DIR$/src/main/META-INF/MANIFEST.MF">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/remotepcdroidserver/gui/RemotePCDroidServerGui.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6188">
-          <caret line="394" column="101" selection-start-line="394" selection-start-column="101" selection-end-line="394" selection-end-column="101" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#10253#10254#0" expanded="true" />
-            <element signature="e#10324#10325#0" expanded="true" />
-            <element signature="e#10693#10694#0" expanded="true" />
-            <element signature="e#10758#10759#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/WindowsKeyboardListenerApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/hkq/KeyboardListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/hkq/KeyBoardCallback.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/hkq/WindowsKeyboardListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/hkq/MusicListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/hkq/RegisterUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2261">
-          <caret line="145" selection-start-line="145" selection-end-line="145" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#8326#8327#0" expanded="true" />
-            <element signature="e#8355#8356#0" expanded="true" />
-            <element signature="e#8397#8398#0" expanded="true" />
-            <element signature="e#8428#8429#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/hkq/SelectUid.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/remotepcdroidserver/gui/icon.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/hkq/LinuxKeyboardListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#LinuxKeyboardListener#0" />
-            <element signature="docComment;field#TYPED#0;class#LinuxKeyboardListener#0" />
-            <element signature="docComment;field#PRESSED#0;class#LinuxKeyboardListener#0" />
-            <element signature="docComment;field#RELEASED#0;class#LinuxKeyboardListener#0" />
-            <element signature="e#1176#1177#0" expanded="true" />
-            <element signature="e#1234#1235#0" expanded="true" />
-            <element signature="docComment;method#unListening#0;class#LinuxKeyboardListener#0" />
-            <element signature="docComment;method#resume#0;class#LinuxKeyboardListener#0" />
-            <element signature="docComment;method#destroy#0;class#LinuxKeyboardListener#0" />
-            <element signature="method#destroy#0;class#LinuxKeyboardListener#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/protocol/action/AuthenticationAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="33" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/protocol/action/AuthenticationResponseAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="26" column="34" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/protocol/action/FileExploreRequestAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="29" column="34" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/protocol/action/FileExploreResponseAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="9" column="38" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/protocol/action/HibernateAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" column="28" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/protocol/action/MouseKeyboardAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" column="32" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/protocol/tcp/RemotePCDroidConnectionTcp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="12" column="39" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/RemotePCDroidServerApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="12" column="35" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/protocol/RemotePCDroidActionReceiver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="44" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/protocol/RemotePCDroidConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" column="45" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/remotepcdroidserver/RemotePCDroidServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="36" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/protocol/action/RebootAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" column="25" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/protocol/action/RemotePCDroidAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="10" column="41" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/remotepcdroidserver/RemotePCDroidServerConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="21" column="34" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/protocol/action/ShutDownAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" column="27" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/remotepcdroidserver/RemotePCDroidServerTcp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="16" column="56" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/youdian/soundeffects/LinuxKeyboardListenerApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="118" column="37" selection-start-line="118" selection-start-column="37" selection-end-line="118" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <last-edited>MousKey:jar</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.5" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>No facets are configured</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>MousKey</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>Maven: com.1stleg:jnativehook:2.1.0</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
